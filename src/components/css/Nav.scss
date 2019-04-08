@@ -1,0 +1,34 @@
+.Nav {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background: #282c34;
+    z-index: 5;
+}
+
+.Nav .buttonGroup {
+    position: absolute;
+    right: 5%;
+}
+
+.Nav .button {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 1em 2em;
+    background: none;
+    color: white;
+    font-size: calc(10px + 1vmin);
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+.Nav .button .textUnderline {
+    width: 0px;
+    border-bottom: 1.5px cyan solid;
+    transition: width 0.2s;
+}
+.Nav .button:hover .textUnderline {
+    width: 100%;
+}

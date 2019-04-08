@@ -1,0 +1,168 @@
+.About .startSectionBackground {
+    position: absolute;
+    width: 100%;
+    height: 550px;
+    background: MediumSlateBlue;
+}
+
+/*
+    About Label
+*/
+.About .sectionLabelContainer {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin: 60px auto 20px auto;
+}
+.About .sectionLabelContainer .sectionLabel {
+    display: inline-block;
+    padding: 1em 2em;
+    color: black;
+    font-size: calc(10px + 4vmin);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 3px;
+    color: white;
+}
+.About .sectionLabelContainer .sectionLabelLine {
+    border-bottom: 3px orange solid;
+}
+
+/*
+    About Cards
+*/
+.About .aboutCardContainer {
+    margin-bottom: 30px;
+}
+.About .aboutCardContainer .row .aboutCard {
+    max-width: 350px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+}
+@media only screen and (max-width: 600px) { /* when the browser window is 600px wide or less */
+    .About .aboutCardContainer .row .aboutCard {
+        max-width: 50%;
+    }
+}
+
+.About .aboutCardContainer .row .aboutCard .aboutCard-imageContainer {
+    width: 50%;
+    margin: 0px auto 5px auto;
+}
+.About .aboutCardContainer .row .aboutCard .aboutCard-imageContainer .aboutCard-image {
+    width: 100%;
+}
+.About .aboutCardContainer .row .aboutCard .aboutCard-header {
+    width: 90%;
+    margin: 0px auto 5px auto;
+    font-size: 20px;
+    font-weight: bold;
+}
+.About .aboutCardContainer .row .aboutCard .aboutCard-footer {
+    width: 90%;
+    margin: 0px auto 0px auto;
+    font-size: 15px;
+}
+
+/*
+    About Skill Cols
+*/
+$colOutline: lightgray;
+.About .skillColContainer {
+    width: 90%;
+    max-width: 1500px;
+    margin-bottom: 20px;
+    padding: 1em 2em;
+}
+.About .row .skillCol {
+    padding: 1em 2em;
+    text-align: center;
+    background: white;
+}
+.About .row .leftCol {
+    border-radius: 7px 0px 0px 7px;
+    border-top: 1px $colOutline solid;
+    border-left: 1px $colOutline solid;
+    border-bottom: 1px $colOutline solid;
+}
+.About .row .midCol {
+    border: 1px $colOutline solid;
+}
+.About .row .rightCol {
+    border-radius: 0px 7px 7px 0px;
+    border-top: 1px $colOutline solid;
+    border-right: 1px $colOutline solid;
+    border-bottom: 1px $colOutline solid;
+}
+@media only screen and (max-width: 768px) { /* when the browser window is 768px (sm) wide or less */
+    .About .row .midCol {
+        border-radius: 0px 7px 7px 0px;
+    }
+    .About .row .rightCol {
+        border: 1px $colOutline solid;
+        border-radius: 7px;
+    }
+}
+@media only screen and (max-width: 776px) { /* when the browser window is 776px (sm) wide or less */
+    .About .row .leftCol {
+        border: 1px $colOutline solid;
+        border-radius: 7px;
+    }
+    .About .row .midCol {
+        border: 1px $colOutline solid;
+        border-radius: 7px;
+    }
+    .About .row .rightCol {
+        border: 1px $colOutline solid;
+        border-radius: 7px;
+    }
+}
+
+
+.About .row .skillCol .topSection {
+    margin: 0px auto 20px auto;
+}
+.About .row .skillCol .topSection .imageContainer {
+    width: 30%;
+    margin: 20px auto 10px auto;
+}
+.About .row .skillCol .topSection .imageContainer .image {
+    width: 100%;
+}
+.About .row .skillCol .topSection .header {
+    width: 90%;
+    margin: 0px auto 5px auto;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.About .row .skillCol .topSection .content {
+    width: 70%;
+    margin: 0px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.About .row .skillCol .section {
+    margin: 0px auto 20px auto;
+}
+.About .row .skillCol .section .header {
+    width: 90%;
+    margin: 0px auto 5px auto;
+    color: MediumSlateBlue;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+.About .row .skillCol .section .contentContainer {
+    max-width: 300px;
+}
+.About .row .skillCol .section .contentContainer .content {
+    max-width: 90px;
+    margin: 0px auto;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
