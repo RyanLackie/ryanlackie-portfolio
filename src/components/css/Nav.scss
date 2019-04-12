@@ -1,34 +1,41 @@
 .Nav {
-    position: absolute;
+    position: fixed;
     width: 100%;
-    height: 60px;
-    background: #282c34;
+    height: 80px;
     z-index: 5;
+    transition: height 0.2s;
 }
 
 .Nav .buttonGroup {
     position: absolute;
-    right: 5%;
+    right: 100px;
+    height: 100%;
 }
 
-.Nav .button {
+.Nav .centerer {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+//outline: 1px red solid;
+.Nav .buttonGroup .button {
     display: inline-block;
     vertical-align: middle;
-    padding: 1em 2em;
-    background: none;
+    height: 60%;
+    padding: 0px 2em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.Nav .buttonGroup .button .button-text {
+    display: inline-block;
     color: white;
-    font-size: calc(10px + 1vmin);
-    font-weight: bold;
+    font-size: 13px;
     font-family: 'Quicksand', sans-serif;
     letter-spacing: 3px;
-    cursor: pointer;
+    text-align: center;
 }
 
-.Nav .button .textUnderline {
-    width: 0px;
-    border-bottom: 1.5px cyan solid;
-    transition: width 0.2s;
-}
-.Nav .button:hover .textUnderline {
-    width: 100%;
+.Nav .buttonGroup .button:hover .button-text {
+    color: gold;
 }

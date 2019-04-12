@@ -14,11 +14,13 @@ export default class Nav extends Component {
     }
 
     handlePageMovement() {
-        if (window.scrollY >= 15) {
-            document.getElementById('Nav').style.position = 'fixed';
+        if (window.scrollY >= 50) {
+            document.getElementById('Nav').style.height = '50px';
+            document.getElementById('Nav').style.background = 'black';
         }
         else {
-            document.getElementById('Nav').style.position = 'absolute';
+            document.getElementById('Nav').style.height = '80px';
+            document.getElementById('Nav').style.background = 'transparent';
         }
     }
 
@@ -30,18 +32,24 @@ export default class Nav extends Component {
         return (
             <div className='Nav' id='Nav'>
                 <div className="buttonGroup">
-                    <div className="button" onClick={this.run}>
-                        About
-                        <div className='textUnderline'></div>
+
+                    <div className="centerer"></div>
+
+                    <div className="button">
+                        <div className="centerer"></div>
+                        <div className="button-text">WHAT I DO</div>
                     </div>
-                    <div className="button" onClick={this.run}>
-                        Projects
-                        <div className='textUnderline'></div>
+
+                    <div className="button">
+                        <div className="centerer"></div>
+                        <div className="button-text">PORTOLIO</div>
                     </div>
-                    <div className="button" onClick={this.run}>
-                        Contact
-                        <div className='textUnderline'></div>
+
+                    <div className="button">
+                        <div className="centerer"></div>
+                        <div className="button-text">About</div>
                     </div>
+
                 </div>
             </div>
         );
