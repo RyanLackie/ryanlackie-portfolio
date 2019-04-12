@@ -14,13 +14,11 @@ export default class Nav extends Component {
     }
 
     handlePageMovement() {
-        if ((window.scrollY - window.innerHeight) >= 0) {
+        if (window.scrollY >= 15) {
             document.getElementById('Nav').style.position = 'fixed';
-            document.getElementById('Nav').style.top = '0px';
         }
         else {
             document.getElementById('Nav').style.position = 'absolute';
-            document.getElementById('Nav').style.top = window.innerHeight + 'px';
         }
     }
 

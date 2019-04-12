@@ -12,8 +12,8 @@ class App extends Component {
         return (
             <div className="App">
             
-                <Home></Home>
                 <Nav></Nav>
+                <Home></Home>
                 <About></About>
                 
                 <Home></Home>
