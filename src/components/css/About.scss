@@ -24,7 +24,7 @@
     font-weight: bold;
     text-align: center;
     letter-spacing: 3px;
-    color: white;
+    color: black;
 }
 .About .sectionLabelContainer .sectionLabelLine {
     border-bottom: 3px orange solid;
@@ -40,7 +40,7 @@
     max-width: 350px;
     margin-bottom: 20px;
     text-align: center;
-    color: white;
+    color: black;
 }
 @media only screen and (max-width: 600px) { /* when the browser window is 600px wide or less */
     .About .aboutCardContainer .row .aboutCard {
@@ -152,7 +152,7 @@ $colOutline: lightgray;
 .About .row .skillCol .section .header {
     width: 90%;
     margin: 0px auto 5px auto;
-    color: MediumSlateBlue;
+    color: purple;
     font-family: 'Quicksand', sans-serif;
     font-size: 22px;
     font-weight: bold;

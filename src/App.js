@@ -15,9 +15,6 @@ class App extends Component {
                 <Nav></Nav>
                 <Home></Home>
                 <About></About>
-                
-                <Home></Home>
-                <Home></Home>
 
             </div>
         );

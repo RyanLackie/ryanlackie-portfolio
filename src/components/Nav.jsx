@@ -24,10 +24,6 @@ export default class Nav extends Component {
         }
     }
 
-    run() {
-        alert('test');
-    }
-
     render() {
         return (
             <div className='Nav' id='Nav'>
@@ -47,7 +43,7 @@ export default class Nav extends Component {
 
                     <div className="button">
                         <div className="centerer"></div>
-                        <div className="button-text">About</div>
+                        <div className="button-text">ABOUT</div>
                     </div>
 
                 </div>
