@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 import Home from "./components/Home";
 import Nav from "./components/Nav"
-import About from "./components/About";
+import Skills from "./components/Skills";
 
 import './App.scss';
 
@@ -14,7 +14,7 @@ class App extends Component {
             
                 <Nav></Nav>
                 <Home></Home>
-                <About></About>
+                <Skills></Skills>
 
             </div>
         );

@@ -8,7 +8,7 @@
 
 .Nav .buttonGroup {
     position: absolute;
-    right: 100px;
+    right: 0px;
     height: 100%;
 }
 
@@ -23,19 +23,27 @@
     display: inline-block;
     vertical-align: middle;
     height: 60%;
-    padding: 0px 2em;
+    padding: 0px 1em;
     cursor: pointer;
     border-radius: 5px;
+    color: white;
 }
 .Nav .buttonGroup .button .button-text {
     display: inline-block;
-    color: white;
     font-size: 13px;
     font-family: 'Quicksand', sans-serif;
     letter-spacing: 3px;
     text-align: center;
 }
 
-.Nav .buttonGroup .button:hover .button-text {
+.Nav .buttonGroup .button:hover {
     color: gold;
+}
+
+.Nav .buttonGroup .activeBtn {
+    color: white;
+    background: gold;
+}
+.Nav .buttonGroup .activeBtn:hover {
+    color: white;
 }

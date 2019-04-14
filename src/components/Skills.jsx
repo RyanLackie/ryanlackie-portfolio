@@ -1,77 +1,123 @@
 import React, { Component } from 'react';
 
-import './css/About.scss';
+import './css/Skills.scss';
 
-import designImg from '../assets/placeholder.png';
-import dynamicImg from '../assets/placeholder.png';
-import fastImage from '../assets/placeholder.png';
-import architectureImage from '../assets/placeholder.png';
+import img1 from '../assets/placeholder.png';
+import img2 from '../assets/placeholder.png';
+import img3 from '../assets/placeholder.png';
+import img4 from '../assets/placeholder.png';
 
-import frontendImage from '../assets/placeholder.png';
-import backEndImage from '../assets/placeholder.png';
+//import frontendImage from '../assets/placeholder.png';
+//import backEndImage from '../assets/placeholder.png';
 
-export default class About extends Component {
+export default class Skills extends Component {
     render() {
         return (
-            <div className='About'>
-
-                <div className="startSectionBackground"></div>
+            <div className='Skills'>
 
                 <div className="sectionLabelContainer">
                     <div className="sectionLabel">
-                        About
+                        Skills
                         <div className="sectionLabelLine"></div>
                     </div>
                 </div>
 
 
-                <div className="aboutCardContainer container-fluid">
-                    <div className="row justify-content-md-center">
-                        
-                        <div className="aboutCard col-xs-6 col-sm-6 col-md-3">
-                            <div className="aboutCard-imageContainer">
-                                <img src={designImg} className='aboutCard-image' alt='Design Img'></img>
-                            </div>
-                            <div className="aboutCard-header">Design</div>
-                            <div className="aboutCard-footer">
-                                Responsive with Intuitive design - Good UI and UX design need both.
-                            </div>
-                        </div>
+                <div className="container-fluid">
+                    <div className="row justify-content-center">
+                        <div className="col-lg-9">
+                            <div className="row justify-content-center">
 
-                        <div className="aboutCard col-xs-6 col-sm-6 col-md-3">
-                            <div className="aboutCard-imageContainer">
-                                <img src={dynamicImg} className='aboutCard-image' alt='Dynamic Img'></img>
-                            </div>
-                            <div className="aboutCard-header">Dynamic</div>
-                            <div className="aboutCard-footer">
-                                Websites and applications can come to life and immerse the user.
-                            </div>
-                        </div>
+                                <div className="skillsCard col-sm-6 col-md-3">
+                                    <img src={img1} className='image' alt='Web Application Development Img'></img>
+                                    <div className="header">
+                                        Web Application Development
+                                    </div>
+                                    <div className="footer">
+                                        Fast, responsive and intuitive apps implimenting UI and UX design that keep the user engaged.
+                                    </div>
+                                </div>
 
-                        <div className="aboutCard col-xs-6 col-sm-6 col-md-3">
-                            <div className="aboutCard-imageContainer">
-                                <img src={fastImage} className='aboutCard-image' alt='Fast Img'></img>
-                            </div>
-                            <div className="aboutCard-header">Fast</div>
-                            <div className="aboutCard-footer">
-                                Optimized to be as light as possible on the front-end and back-end - No one wants to wait.
-                            </div>
-                        </div>
+                                <div className="skillsCard col-sm-6 col-md-3">
+                                    <img src={img2} className='image' alt='API Integration & Development Img'></img>
+                                    <div className="header">
+                                        API Integration & Development
+                                    </div>
+                                    <div className="footer">
+                                        REST API uitilization and production for large scale projects using Node.js and Spring Boot.
+                                    </div>
+                                </div>
 
-                        <div className="aboutCard col-xs-6 col-sm-6 col-md-3">
-                            <div className="aboutCard-imageContainer">
-                                <img src={architectureImage} className='aboutCard-image' alt='Architecture Img'></img>
-                            </div>
-                            <div className="aboutCard-header">Architecture</div>
-                            <div className="aboutCard-footer">
-                                Stay connected and use custom built microservices to interact with databases and more.
+                                <div className="skillsCard col-sm-6 col-md-3">
+                                    <img src={img3} className='image' alt='Database Design & Development Img'></img>
+                                    <div className="header">
+                                        Database Design & Development
+                                    </div>
+                                    <div className="footer">
+                                        Database architectures in MySQL or Parse Server, always aiming for performance, scale and stability.
+                                    </div>
+                                </div>
+
+                                <div className="skillsCard col-sm-6 col-md-3">
+                                    <img src={img4} className='image' alt='Cloud Integration Img'></img>
+                                    <div className="header">Cloud Integration</div>
+                                    <div className="footer">
+                                        Deployment of Vue and React, Node.js apps, and databases to cloud platforms.
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
-                        
                     </div>
                 </div>
 
+                <div className="container-fluid">
+                    <div className="row">
+                        <div className="col-lg-12">
 
+                            <div className="skillRow row justify-content-center">
+
+                                <div className="type col-sm-12 col-md-3">
+                                    <div className="centerer"></div>
+                                    <div className="header">Front-End</div>
+                                </div>
+
+                                <div className="group col-sm-4 col-md-3">
+                                    <div className="header">Languages</div>
+                                    <div className="info row justify-content-center">
+                                        <div className="col-md-6">HTML</div>
+                                        <div className="col-md-6">CSS</div>
+                                        <div className="col-md-6">SCSS</div>
+                                        <div className="col-md-6">JavaScript</div>
+                                        <div className="col-md-6">TypeScript</div>
+                                    </div>
+                                </div>
+
+                                <div className="group col-sm-4 col-md-3">
+                                    <div className="header">Frameworks</div>
+                                    <div className="info row justify-content-center">
+                                        <div className="col-md-6">Vue.js</div>
+                                        <div className="col-md-6">React</div>
+                                        <div className="col-md-6">Angular 2+</div>
+                                    </div>
+                                </div>
+
+                                <div className="group col-sm-4 col-md-3">
+                                    <div className="header">Tools</div>
+                                    <div className="info row justify-content-center">
+                                        <div className="col-md-6">Bootstrap</div>
+                                        <div className="col-md-6">jQuery</div>
+                                        <div className="col-md-6">Webpack</div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                {/*
                 <div className="skillColContainer container">
                     <div className="row justify-content-center">
                     
@@ -183,6 +229,7 @@ export default class About extends Component {
 
                     </div>
                 </div>
+                */}
                 
             </div>
         );

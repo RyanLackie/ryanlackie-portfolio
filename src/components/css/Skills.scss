@@ -1,75 +1,119 @@
-.About .startSectionBackground {
-    position: absolute;
-    width: 100%;
-    height: 550px;
-    background: lightgray;
+.Skills {
+    padding: 30px 0px 50px 0px;
 }
 
 /*
-    About Label
+    Skills Label
 */
-.About .sectionLabelContainer {
+.Skills .sectionLabelContainer {
     position: relative;
     width: 100%;
     text-align: center;
     margin: 0px auto 20px auto;
 }
-.About .sectionLabelContainer .sectionLabel {
+.Skills .sectionLabelContainer .sectionLabel {
     display: inline-block;
     padding: 1em 2em;
-    color: black;
-    font-size: calc(10px + 4vmin);
-    font-family: 'Quicksand', sans-serif;
-    font-size: 30px;
-    font-weight: bold;
     text-align: center;
     letter-spacing: 3px;
     color: black;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Exo', sans-serif;
 }
-.About .sectionLabelContainer .sectionLabelLine {
+.Skills .sectionLabelContainer .sectionLabelLine {
     border-bottom: 3px orange solid;
 }
 
 /*
-    About Cards
+    Skills Section
 */
-.About .aboutCardContainer {
-    margin-bottom: 30px;
+.Skills .container-fluid {
+    max-width: 1200px;
 }
-.About .aboutCardContainer .row .aboutCard {
-    max-width: 350px;
-    margin-bottom: 20px;
+
+/*
+    Skills Cards
+*/
+.Skills .skillsCard {
+    margin: 0px auto 70px auto;
+    padding: 0px 15px;
     text-align: center;
     color: black;
 }
-@media only screen and (max-width: 600px) { /* when the browser window is 600px wide or less */
-    .About .aboutCardContainer .row .aboutCard {
-        max-width: 50%;
-    }
+.Skills .skillsCard .image {
+    width: 100px;
+    margin: 0px auto 10px auto;
+}
+.Skills .skillsCard .header {
+    width: 90%;
+    margin: 0px auto 10px auto;
+    font-size: 16px;
+    line-height: 1.1em;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+.Skills .skillsCard .footer {
+    width: 90%;
+    margin: 0px auto;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Exo', sans-serif;
+    color: gray;
 }
 
-.About .aboutCardContainer .row .aboutCard .aboutCard-imageContainer {
-    width: 50%;
-    margin: 0px auto 5px auto;
+/*
+    Skill Cols
+*/
+.Skills .skillRow {
+    font-family: 'Montserrat', sans-serif;
+    outline: 1px blue solid;
 }
-.About .aboutCardContainer .row .aboutCard .aboutCard-imageContainer .aboutCard-image {
+
+.Skills .skillRow .type {
+    padding: 0px 15px;
+    outline: 1px red solid;
+}
+.Skills .skillRow .type .centerer {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.Skills .skillRow .type .header {
+    display: inline-block;
+    vertical-align: middle;
     width: 100%;
-}
-.About .aboutCardContainer .row .aboutCard .aboutCard-header {
-    width: 90%;
-    margin: 0px auto 5px auto;
-    font-size: 20px;
+    text-align: center;
+    font-size: 30px;
     font-weight: bold;
+    outline: 1px blue solid; 
 }
-.About .aboutCardContainer .row .aboutCard .aboutCard-footer {
-    width: 90%;
-    margin: 0px auto 0px auto;
+
+.Skills .skillRow .group {
+    padding: 0px 15px;
+    outline: 1px red solid;
+}
+.Skills .skillRow .group .header {
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    outline: 1px blue solid; 
+}
+.Skills .skillRow .group .info {
+    margin: 0px auto;
     font-size: 15px;
+    text-align: center;
+    outline: 1px blue solid; 
 }
 
 /*
     About Skill Cols
 */
+/*
 $colOutline: lightgray;
 .About .skillColContainer {
     width: 90%;
@@ -97,7 +141,7 @@ $colOutline: lightgray;
     border-right: 1px $colOutline solid;
     border-bottom: 1px $colOutline solid;
 }
-@media only screen and (max-width: 768px) { /* when the browser window is 768px (sm) wide or less */
+@media only screen and (max-width: 768px) { // when the browser window is 768px (sm) wide or less 
     .About .row .midCol {
         border-radius: 0px 7px 7px 0px;
     }
@@ -106,7 +150,7 @@ $colOutline: lightgray;
         border-radius: 7px;
     }
 }
-@media only screen and (max-width: 776px) { /* when the browser window is 776px (sm) wide or less */
+@media only screen and (max-width: 776px) { // when the browser window is 776px (sm) wide or less
     .About .row .leftCol {
         border: 1px $colOutline solid;
         border-radius: 7px;
@@ -166,3 +210,4 @@ $colOutline: lightgray;
     padding: 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+*/

@@ -24,6 +24,14 @@ export default class Nav extends Component {
         }
     }
 
+    handleButtonClick(id) {
+        document.getElementById('btn1').classList.remove('activeBtn');
+        document.getElementById('btn2').classList.remove('activeBtn');
+        document.getElementById('btn3').classList.remove('activeBtn');
+
+        document.getElementById(id).classList.add('activeBtn');
+    }
+
     render() {
         return (
             <div className='Nav' id='Nav'>
@@ -31,17 +39,17 @@ export default class Nav extends Component {
 
                     <div className="centerer"></div>
 
-                    <div className="button">
+                    <div className="button unactiveBtn" id='btn1' onClick={this.handleButtonClick.bind(this, 'btn1')}>
                         <div className="centerer"></div>
-                        <div className="button-text">WHAT I DO</div>
+                        <div className="button-text">SKILLS</div>
                     </div>
 
-                    <div className="button">
+                    <div className="button unactiveBtn" id='btn2' onClick={this.handleButtonClick.bind(this, 'btn2')}>
                         <div className="centerer"></div>
                         <div className="button-text">PORTOLIO</div>
                     </div>
 
-                    <div className="button">
+                    <div className="button unactiveBtn" id='btn3' onClick={this.handleButtonClick.bind(this, 'btn3')}>
                         <div className="centerer"></div>
                         <div className="button-text">ABOUT</div>
                     </div>
