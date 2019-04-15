@@ -2,18 +2,30 @@ import React, { Component } from 'react';
 
 import './css/Skills.scss';
 
-import img1 from '../assets/placeholder.png';
-import img2 from '../assets/placeholder.png';
-import img3 from '../assets/placeholder.png';
-import img4 from '../assets/placeholder.png';
+import img1 from '../assets/web-icon.png';
+import img2 from '../assets/api-icon.png';
+import img3 from '../assets/database-icon.png';
+import img4 from '../assets/cloud-icon.png';
 
 //import frontendImage from '../assets/placeholder.png';
 //import backEndImage from '../assets/placeholder.png';
 
 export default class Skills extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            handleSkillsLocation: 0
+        };
+    }
+
+    componentWillUpdate() {
+        var top = document.getElementById('Skills').getBoundingClientRect().top;
+        this.props.handleSkillsLocation(top);
+    }
+
     render() {
         return (
-            <div className='Skills'>
+            <div className='Skills' id='Skills'>
 
                 <div className="sectionLabelContainer">
                     <div className="sectionLabel">

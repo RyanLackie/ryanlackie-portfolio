@@ -3,18 +3,17 @@ import React, { Component } from 'react';
 import './css/Nav.scss';
 
 export default class Nav extends Component {
-    componentDidMount() {
-        this.handlePageMovement();
-        window.addEventListener('scroll', this.handlePageMovement);
-        window.addEventListener('resize', this.handlePageMovement);
-    }
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.handlePageMovement);
-        window.removeEventListener('resize', this.handlePageMovement);
+    constructor(props) {
+        super(props);
+        this.state = {
+            scroll: 0,
+
+            skillsLocation: 0
+        };
     }
 
-    handlePageMovement() {
-        if (window.scrollY >= 50) {
+    componentWillUpdate() {
+        if (this.props.scroll >= 50) {
             document.getElementById('Nav').style.height = '50px';
             document.getElementById('Nav').style.background = 'black';
         }
@@ -22,6 +21,8 @@ export default class Nav extends Component {
             document.getElementById('Nav').style.height = '80px';
             document.getElementById('Nav').style.background = 'transparent';
         }
+
+        console.log(this.props.skillsLocation);
     }
 
     handleButtonClick(id) {
