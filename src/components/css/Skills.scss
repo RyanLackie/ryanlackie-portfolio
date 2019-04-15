@@ -37,28 +37,29 @@
     Skills Cards
 */
 .Skills .skillsCard {
-    margin: 0px auto 70px auto;
+    min-width: 500px;
+    max-width: 500px;
+    margin: 0px 10px 70px 10px;
     padding: 0px 15px;
     text-align: center;
     color: black;
 }
 .Skills .skillsCard .image {
-    width: 100px;
+    width: 150px;
     margin: 0px auto 10px auto;
 }
 .Skills .skillsCard .header {
-    width: 90%;
+    width: 100%;
     margin: 0px auto 10px auto;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.1em;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
 }
 .Skills .skillsCard .footer {
-    width: 90%;
+    width: 70%;
     margin: 0px auto;
-    font-size: 12px;
-    font-weight: bold;
+    font-size: 14px;
     font-family: 'Roboto', sans-serif;
     font-family: 'Exo', sans-serif;
     color: gray;
@@ -67,147 +68,44 @@
 /*
     Skill Cols
 */
-.Skills .skillRow {
-    font-family: 'Montserrat', sans-serif;
-    outline: 1px blue solid;
+.Skills .type {
+    margin: 0px auto 30px auto;
 }
-
-.Skills .skillRow .type {
-    padding: 0px 15px;
-    outline: 1px red solid;
-}
-.Skills .skillRow .type .centerer {
+.Skills .type .centerer {
     display: inline-block;
     height: 100%;
     vertical-align: middle;
 }
-.Skills .skillRow .type .header {
+.Skills .type .header {
     display: inline-block;
     vertical-align: middle;
     width: 100%;
     text-align: center;
     font-size: 30px;
     font-weight: bold;
-    outline: 1px blue solid; 
+    font-family: 'Montserrat', sans-serif;
 }
 
+.Skills .skillRow {
+    font-family: 'Montserrat', sans-serif;
+}
 .Skills .skillRow .group {
-    padding: 0px 15px;
-    outline: 1px red solid;
+    margin: 0px 2% 40px 2%;
+    padding: 30px 0px;
+    border-radius: 5px;
+    border: 1px lightgray solid;
+    box-shadow:0 10px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background: white;
 }
 .Skills .skillRow .group .header {
     width: 100%;
+    margin-bottom: 20px;
     text-align: center;
     font-size: 25px;
     font-weight: bold;
-    margin-bottom: 10px;
-    outline: 1px blue solid; 
 }
 .Skills .skillRow .group .info {
     margin: 0px auto;
     font-size: 15px;
     text-align: center;
-    outline: 1px blue solid; 
 }
-
-/*
-    About Skill Cols
-*/
-/*
-$colOutline: lightgray;
-.About .skillColContainer {
-    width: 90%;
-    max-width: 1500px;
-    margin-bottom: 20px;
-    padding: 1em 2em;
-}
-.About .row .skillCol {
-    padding: 1em 2em;
-    text-align: center;
-    background: white;
-}
-.About .row .leftCol {
-    border-radius: 7px 0px 0px 7px;
-    border-top: 1px $colOutline solid;
-    border-left: 1px $colOutline solid;
-    border-bottom: 1px $colOutline solid;
-}
-.About .row .midCol {
-    border: 1px $colOutline solid;
-}
-.About .row .rightCol {
-    border-radius: 0px 7px 7px 0px;
-    border-top: 1px $colOutline solid;
-    border-right: 1px $colOutline solid;
-    border-bottom: 1px $colOutline solid;
-}
-@media only screen and (max-width: 768px) { // when the browser window is 768px (sm) wide or less 
-    .About .row .midCol {
-        border-radius: 0px 7px 7px 0px;
-    }
-    .About .row .rightCol {
-        border: 1px $colOutline solid;
-        border-radius: 7px;
-    }
-}
-@media only screen and (max-width: 776px) { // when the browser window is 776px (sm) wide or less
-    .About .row .leftCol {
-        border: 1px $colOutline solid;
-        border-radius: 7px;
-    }
-    .About .row .midCol {
-        border: 1px $colOutline solid;
-        border-radius: 7px;
-    }
-    .About .row .rightCol {
-        border: 1px $colOutline solid;
-        border-radius: 7px;
-    }
-}
-
-
-.About .row .skillCol .topSection {
-    margin: 0px auto 20px auto;
-}
-.About .row .skillCol .topSection .imageContainer {
-    width: 30%;
-    margin: 20px auto 10px auto;
-}
-.About .row .skillCol .topSection .imageContainer .image {
-    width: 100%;
-}
-.About .row .skillCol .topSection .header {
-    width: 90%;
-    margin: 0px auto 5px auto;
-    font-size: 25px;
-    font-weight: bold;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-.About .row .skillCol .topSection .content {
-    width: 70%;
-    margin: 0px auto;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-
-.About .row .skillCol .section {
-    margin: 0px auto 20px auto;
-}
-.About .row .skillCol .section .header {
-    width: 90%;
-    margin: 0px auto 5px auto;
-    color: purple;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 22px;
-    font-weight: bold;
-}
-.About .row .skillCol .section .contentContainer {
-    max-width: 300px;
-}
-.About .row .skillCol .section .contentContainer .content {
-    max-width: 90px;
-    margin: 0px auto;
-    padding: 0px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-*/
