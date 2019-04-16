@@ -11,7 +11,7 @@ class App extends Component {
     state = {
         scroll: 0,
 
-        skillsLocation: 0
+        skillsLocation: null
     };
 
     componentDidMount() {
@@ -23,7 +23,6 @@ class App extends Component {
         window.removeEventListener('scroll', this.handlePageMovement);
         window.removeEventListener('resize', this.handlePageMovement);
     }
-
     handlePageMovement = () => {
         this.setState({
             scroll: window.scrollY
@@ -39,8 +38,8 @@ class App extends Component {
         return (
             <div className="App">
             
-                <Nav scroll={this.state.scroll} skillsLocation={this.state.skillsLocation}/>
-                <Home scroll={this.state.scroll}/>
+                <Nav skillsLocation={this.state.skillsLocation}/>
+                <Home/>
                 <Skills handleSkillsLocation={this.handleSkillsLocation}/>
 
             </div>

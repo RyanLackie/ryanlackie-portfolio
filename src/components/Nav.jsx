@@ -6,14 +6,12 @@ export default class Nav extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            scroll: 0,
-
             skillsLocation: 0
         };
     }
 
     componentWillUpdate() {
-        if (this.props.scroll >= 50) {
+        if (window.scrollY >= 50) {
             document.getElementById('Nav').style.height = '50px';
             document.getElementById('Nav').style.background = 'black';
         }
@@ -22,7 +20,11 @@ export default class Nav extends Component {
             document.getElementById('Nav').style.background = 'transparent';
         }
 
-        console.log(this.props.skillsLocation);
+        //console.log(this.props.skillsLocation +'  <=  '+ window.innerHeight/2);
+        if (this.props.skillsLocation !== null && this.props.skillsLocation <= window.innerHeight/2)
+            document.getElementById('btn1').classList.add('activeBtn');
+        else
+            document.getElementById('btn1').classList.remove('activeBtn');
     }
 
     handleButtonClick(id) {

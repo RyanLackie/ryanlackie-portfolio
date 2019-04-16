@@ -3,12 +3,6 @@ import React, { Component } from "react";
 import './css/Home.css';
 
 export default class Home extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            scroll: 0
-        };
-    }
 
     componentWillUpdate() {
         document.getElementById('hero').style.backgroundPosition = '0px ' + -(window.scrollY*0.1)+'px';
