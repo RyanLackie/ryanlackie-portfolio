@@ -25,7 +25,7 @@ export default class Skills extends Component {
 
     render() {
         return (
-            <div className='Skills' id='Skills'>
+            <div className='Skills section' id='Skills'>
 
                 <div className="sectionLabelContainer">
                     <div className="sectionLabel">

@@ -6,13 +6,14 @@ export default class Nav extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            skillsLocation: 0
+            skillsLocation: 0,
+            portfolioLocation: 0
         };
     }
 
     componentWillUpdate() {
         if (window.scrollY >= 50) {
-            document.getElementById('Nav').style.height = '50px';
+            document.getElementById('Nav').style.height = '60px';
             document.getElementById('Nav').style.background = 'black';
         }
         else {
@@ -25,6 +26,13 @@ export default class Nav extends Component {
             document.getElementById('btn1').classList.add('activeBtn');
         else
             document.getElementById('btn1').classList.remove('activeBtn');
+
+        if (this.props.portfolioLocation !== null && this.props.portfolioLocation <= window.innerHeight/2) {
+            document.getElementById('btn1').classList.remove('activeBtn');
+            document.getElementById('btn2').classList.add('activeBtn');
+        }
+        else
+            document.getElementById('btn2').classList.remove('activeBtn');
     }
 
     handleButtonClick(id) {

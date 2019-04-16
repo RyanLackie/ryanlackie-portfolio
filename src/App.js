@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 //import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 
-import Home from "./components/Home";
 import Nav from "./components/Nav"
+import Home from "./components/Home";
 import Skills from "./components/Skills";
+import Portfolio from "./components/Portfolio";
 
 import './App.scss';
 
@@ -11,7 +12,8 @@ class App extends Component {
     state = {
         scroll: 0,
 
-        skillsLocation: null
+        skillsLocation: null,
+        portfolioLocation: null
     };
 
     componentDidMount() {
@@ -33,14 +35,19 @@ class App extends Component {
         if (this.state.skillsLocation !== location)
             this.setState({skillsLocation: location});
     }
+    handlePortfolioLocation = (location) => {
+        if (this.state.portfolioLocation !== location)
+            this.setState({portfolioLocation: location});
+    }
 
     render() {
         return (
             <div className="App">
             
-                <Nav skillsLocation={this.state.skillsLocation}/>
+                <Nav skillsLocation={this.state.skillsLocation} portfolioLocation={this.state.portfolioLocation}/>
                 <Home/>
                 <Skills handleSkillsLocation={this.handleSkillsLocation}/>
+                <Portfolio handlePortfolioLocation={this.handlePortfolioLocation}/>
 
             </div>
         );
