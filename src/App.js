@@ -10,44 +10,37 @@ import './App.scss';
 
 class App extends Component {
     state = {
-        scroll: 0,
-
+        topLocation: null,
         skillsLocation: null,
         portfolioLocation: null
     };
 
     componentDidMount() {
-        this.handlePageMovement();
-        window.addEventListener('scroll', this.handlePageMovement);
-        window.addEventListener('resize', this.handlePageMovement);
+        this.updateLocations();
+        window.addEventListener('scroll', this.updateLocations);
+        window.addEventListener('resize', this.updateLocations);
     }
     componentWillUnmount() {
-        window.removeEventListener('scroll', this.handlePageMovement);
-        window.removeEventListener('resize', this.handlePageMovement);
-    }
-    handlePageMovement = () => {
-        this.setState({
-            scroll: window.scrollY
-        });
+        window.removeEventListener('scroll', this.updateLocations);
+        window.removeEventListener('resize', this.updateLocations);
     }
 
-    handleSkillsLocation = (location) => {
-        if (this.state.skillsLocation !== location)
-            this.setState({skillsLocation: location});
-    }
-    handlePortfolioLocation = (location) => {
-        if (this.state.portfolioLocation !== location)
-            this.setState({portfolioLocation: location});
+    updateLocations = () => {
+        this.setState({
+            topLocation: document.getElementById('App').getBoundingClientRect(),
+            skillsLocation: document.getElementById('Skills').getBoundingClientRect(),
+            portfolioLocation: document.getElementById('Portfolio').getBoundingClientRect()
+        });
     }
 
     render() {
         return (
-            <div className="App">
+            <div className="App" id='App'>
             
-                <Nav skillsLocation={this.state.skillsLocation} portfolioLocation={this.state.portfolioLocation}/>
+                <Nav topLocation={this.state.topLocation} skillsLocation={this.state.skillsLocation} portfolioLocation={this.state.portfolioLocation}/>
                 <Home/>
-                <Skills handleSkillsLocation={this.handleSkillsLocation}/>
-                <Portfolio handlePortfolioLocation={this.handlePortfolioLocation}/>
+                <Skills id='Skills'/>
+                <Portfolio id='Portfolio'/>
 
             </div>
         );

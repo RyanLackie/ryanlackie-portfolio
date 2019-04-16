@@ -6,12 +6,14 @@ export default class Nav extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            topLocation: 0,
             skillsLocation: 0,
             portfolioLocation: 0
         };
     }
 
     componentWillUpdate() {
+        //Nav Apperence
         if (window.scrollY >= 50) {
             document.getElementById('Nav').style.height = '60px';
             document.getElementById('Nav').style.background = 'black';
@@ -21,26 +23,23 @@ export default class Nav extends Component {
             document.getElementById('Nav').style.background = 'transparent';
         }
 
-        //console.log(this.props.skillsLocation +'  <=  '+ window.innerHeight/2);
-        if (this.props.skillsLocation !== null && this.props.skillsLocation <= window.innerHeight/2)
-            document.getElementById('btn1').classList.add('activeBtn');
+        //Nav Link
+        if (this.props.skillsLocation !== null && this.props.skillsLocation.top <= window.innerHeight/2 && this.props.skillsLocation.bottom >= window.innerHeight/2)
+            document.getElementById('skillsBtn').classList.add('activeBtn');
         else
-            document.getElementById('btn1').classList.remove('activeBtn');
+            document.getElementById('skillsBtn').classList.remove('activeBtn');
 
-        if (this.props.portfolioLocation !== null && this.props.portfolioLocation <= window.innerHeight/2) {
-            document.getElementById('btn1').classList.remove('activeBtn');
-            document.getElementById('btn2').classList.add('activeBtn');
-        }
+        if (this.props.portfolioLocation !== null && this.props.portfolioLocation.top <= window.innerHeight/2 && this.props.portfolioLocation.bottom >= window.innerHeight/2)
+            document.getElementById('portfolioBtn').classList.add('activeBtn');
         else
-            document.getElementById('btn2').classList.remove('activeBtn');
+            document.getElementById('portfolioBtn').classList.remove('activeBtn');
     }
 
-    handleButtonClick(id) {
-        document.getElementById('btn1').classList.remove('activeBtn');
-        document.getElementById('btn2').classList.remove('activeBtn');
-        document.getElementById('btn3').classList.remove('activeBtn');
-
-        document.getElementById(id).classList.add('activeBtn');
+    handleButtonClick(location) {
+        window.scrollTo({
+            top: Math.abs(this.props.topLocation.top - location.top) - 60,
+            behavior: 'smooth'
+        });   
     }
 
     render() {
@@ -50,17 +49,17 @@ export default class Nav extends Component {
 
                     <div className="centerer"></div>
 
-                    <div className="button unactiveBtn" id='btn1' onClick={this.handleButtonClick.bind(this, 'btn1')}>
+                    <div className="button unactiveBtn" id='skillsBtn' onClick={this.handleButtonClick.bind(this, this.props.skillsLocation)}>
                         <div className="centerer"></div>
                         <div className="button-text">SKILLS</div>
                     </div>
 
-                    <div className="button unactiveBtn" id='btn2' onClick={this.handleButtonClick.bind(this, 'btn2')}>
+                    <div className="button unactiveBtn" id='portfolioBtn' onClick={this.handleButtonClick.bind(this, this.props.portfolioLocation)}>
                         <div className="centerer"></div>
                         <div className="button-text">PORTOLIO</div>
                     </div>
 
-                    <div className="button unactiveBtn" id='btn3' onClick={this.handleButtonClick.bind(this, 'btn3')}>
+                    <div className="button unactiveBtn" id='aboutBtn' onClick={this.handleButtonClick.bind(this, 'aboutBtn')}>
                         <div className="centerer"></div>
                         <div className="button-text">ABOUT</div>
                     </div>

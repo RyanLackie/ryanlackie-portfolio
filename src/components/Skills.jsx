@@ -14,13 +14,8 @@ export default class Skills extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            handleSkillsLocation: 0
+            
         };
-    }
-
-    componentWillUpdate() {
-        var top = document.getElementById('Skills').getBoundingClientRect().top;
-        this.props.handleSkillsLocation(top);
     }
 
     render() {
