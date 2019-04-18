@@ -35,7 +35,8 @@
     Skill Cols
 */
 .Skills .type {
-    margin: 0px auto 30px auto;
+    width: 100%;
+    text-align: center;
 }
 .Skills .type .centerer {
     display: inline-block;
@@ -44,9 +45,6 @@
 }
 .Skills .type .header {
     display: inline-block;
-    vertical-align: middle;
-    width: 100%;
-    text-align: center;
     font-size: 30px;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
@@ -58,12 +56,13 @@
 .Skills .skillRow .group {
     display: inline-block;
     width: 300px;
-    margin: 0px 2% 40px 2%;
+    margin: 0px 10px 40px 10px;
     padding: 30px 0px;
     border-radius: 5px;
-    border: 1px lightgray solid;
+    border: 1px black solid;
     box-shadow:0 10px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    background: white;
+    color: white;
+    background: indigo;
 }
 .Skills .skillRow .group .header {
     width: 100%;

@@ -37,7 +37,12 @@ export default class Portfolio extends Component {
                         <div className="project">
                             <div className="imageContainer" onClick={this.projectClicked.bind(this, 'path')}>
                                 <div className='image' style={{backgroundImage: `url(${img1})`}}></div>
-                                <div className="overlay"></div>
+                                <div className="overlay">
+                                    <div className="buttonContainer">
+                                        <button className="linkBtn">See Live</button>
+                                        <button className="linkBtn">See Code</button>
+                                    </div>
+                                </div>
                             </div>
                             <div className="footer">
                                 <div className="title">
@@ -52,7 +57,12 @@ export default class Portfolio extends Component {
                         <div className="project">
                             <div className="imageContainer" onClick={this.projectClicked.bind(this, 'path')}>
                                 <div className='image' style={{backgroundImage: `url(${img2})`}}></div>
-                                <div className="overlay"></div>
+                                <div className="overlay">
+                                    <div className="buttonContainer">
+                                        <button className="linkBtn">See Live</button>
+                                        <button className="linkBtn">See Code</button>
+                                    </div>
+                                </div>
                             </div>
                             <div className="footer">
                                 <div className="title">
@@ -67,7 +77,12 @@ export default class Portfolio extends Component {
                         <div className="project">
                             <div className="imageContainer" onClick={this.projectClicked.bind(this, 'path')}>
                                 <div className='image' style={{backgroundImage: `url(${img3})`}}></div>
-                                <div className="overlay"></div>
+                                <div className="overlay">
+                                    <div className="buttonContainer">
+                                        <button className="linkBtn">See Live</button>
+                                        <button className="linkBtn">See Code</button>
+                                    </div>
+                                </div>
                             </div>
                             <div className="footer">
                                 <div className="title">
@@ -82,7 +97,12 @@ export default class Portfolio extends Component {
                         <div className="project">
                             <div className="imageContainer" onClick={this.projectClicked.bind(this, 'path')}>
                                 <div className='image' style={{backgroundImage: `url(${img4})`}}></div>
-                                <div className="overlay"></div>
+                                <div className="overlay">
+                                    <div className="buttonContainer">
+                                        <button className="linkBtn">See Live</button>
+                                        <button className="linkBtn">See Code</button>
+                                    </div>
+                                </div>
                             </div>
                             <div className="footer">
                                 <div className="title">

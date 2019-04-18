@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import Skills from "./components/Skills";
 import Portfolio from "./components/Portfolio";
 import About from "./components/About";
+import Contact from "./components/Contact"
 
 import './App.scss';
 
@@ -14,7 +15,8 @@ class App extends Component {
         topLocation: null,
         skillsLocation: null,
         portfolioLocation: null,
-        aboutLocation: null
+        aboutLocation: null,
+        contactLocation: null
     };
 
     componentDidMount() {
@@ -32,7 +34,8 @@ class App extends Component {
             topLocation: document.getElementById('App').getBoundingClientRect(),
             skillsLocation: document.getElementById('Skills').getBoundingClientRect(),
             portfolioLocation: document.getElementById('Portfolio').getBoundingClientRect(),
-            aboutLocation: document.getElementById('About').getBoundingClientRect()
+            aboutLocation: document.getElementById('About').getBoundingClientRect(),
+            contactLocation: document.getElementById('Contact').getBoundingClientRect()
         });
     }
 
@@ -45,11 +48,13 @@ class App extends Component {
                     skillsLocation={this.state.skillsLocation}
                     portfolioLocation={this.state.portfolioLocation}
                     aboutLocation={this.state.aboutLocation}
+                    contactLocation={this.state.contactLocation}
                 />
                 <Home/>
                 <Skills id='Skills'/>
                 <Portfolio id='Portfolio'/>
                 <About id='About'/>
+                <Contact id='Contact'/>
 
             </div>
         );

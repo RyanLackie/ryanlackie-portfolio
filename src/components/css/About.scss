@@ -1,3 +1,28 @@
+$forground: indigo;
+$background: white;
+.About .icons {
+    width: 500px;
+    margin: 0px auto 30px auto;
+    text-align: center;
+}
+.About .fa {
+    width: 45px;
+    height: 45px;
+    margin: 0px 2%;
+    padding-top: 5px;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    border: 2px $forground solid;
+    background: $background;
+    color: $forground;
+}
+.About .fa:hover {
+    background: $forground;
+    color: $background;
+}
+
 .About .container-fluid {
     max-width: 1000px;
 }

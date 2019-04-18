@@ -10,6 +10,11 @@ export default class Portfolio extends Component {
         };
     }
 
+    openLink = (url) => {
+        var win = window.open(url, '_blank');
+        win.focus();
+    }
+
     render() {
         return (
             <div className="About section" id='About'>
@@ -19,6 +24,11 @@ export default class Portfolio extends Component {
                         About
                         <div className="sectionLabelLine"></div>
                     </div>
+                </div>
+
+                <div className="icons">
+                    <div onClick={this.openLink.bind(this, "https://www.linkedin.com/in/ryanlackie/")} className="fa fa-linkedin"></div>
+                    <div onClick={this.openLink.bind(this, "https://github.com/RyanLackie")} className="fa fa-github"></div>
                 </div>
 
                 <div className="container-fluid">

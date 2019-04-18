@@ -18,6 +18,22 @@ export default class Skills extends Component {
         };
     }
 
+    componentWillUpdate() {
+        var top = document.getElementById('frontend-container').getBoundingClientRect().top - window.innerHeight; // Start Effect
+        var bottom = document.getElementById('backend-container').getBoundingClientRect().bottom - 500; //End Effect
+
+        var range = bottom - top;
+        var amt = -(top / range);
+        amt = Math.max(0, amt);
+        amt = Math.min(1, amt);
+        amt = 50 * amt; // Distance of effect * amt
+
+        document.getElementById('frontend').style.marginBottom = amt+'px';
+        document.getElementById('backend').style.marginBottom = amt+'px';
+
+        //console.log('amt ' + amt + '   margin ' + document.getElementById('frontend').style.marginBottom);
+    }
+
     render() {
         return (
             <div className='Skills section' id='Skills'>
@@ -80,9 +96,8 @@ export default class Skills extends Component {
                     
                 </div>
 
-
-                <div className="container-fluid">
-                    <div className="type">
+                <div className="container-fluid" id='frontend-container'>
+                    <div className="type" id='frontend'>
                         <div className="centerer"></div>
                         <div className="header">Front-End</div>
                     </div>
@@ -123,8 +138,8 @@ export default class Skills extends Component {
                 </div>
 
 
-                <div className="container-fluid">
-                    <div className="type">
+                <div className="container-fluid" id='backend-container'>
+                    <div className="type" id='backend'>
                         <div className="centerer"></div>
                         <div className="header">Back-End</div>
                     </div>
@@ -162,7 +177,7 @@ export default class Skills extends Component {
                         </div>
 
                     </div>
-                </div>        
+                </div>     
 
                 
             </div>

@@ -9,11 +9,13 @@ export default class Nav extends Component {
             topLocation: 0,
             skillsLocation: 0,
             portfolioLocation: 0,
-            aboutLocation: 0
+            aboutLocation: 0,
+            contactLocation: 0
         };
     }
 
     componentWillUpdate() {
+        console.log(this.props.skillsLocation);
         this.styleNav();
     }
 
@@ -43,6 +45,11 @@ export default class Nav extends Component {
             document.getElementById('aboutBtn').classList.add('activeBtn');
         else
             document.getElementById('aboutBtn').classList.remove('activeBtn');
+
+        if (this.props.contactLocation !== null && this.props.contactLocation.top <= window.innerHeight/2 && this.props.contactLocation.bottom >= window.innerHeight/2)
+            document.getElementById('contactBtn').classList.add('activeBtn');
+        else
+            document.getElementById('contactBtn').classList.remove('activeBtn');
     }
 
     handleButtonClick(location) {
@@ -74,7 +81,7 @@ export default class Nav extends Component {
                         <div className="button-text">ABOUT</div>
                     </div>
 
-                    <div className="button unactiveBtn" id='contactBtn' onClick={this.handleButtonClick.bind(this, 'contactBtn')}>
+                    <div className="button unactiveBtn" id='contactBtn' onClick={this.handleButtonClick.bind(this, this.props.contactLocation)}>
                         <div className="centerer"></div>
                         <div className="button-text">CONTACT</div>
                     </div>
