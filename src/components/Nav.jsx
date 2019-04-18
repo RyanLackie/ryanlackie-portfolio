@@ -8,11 +8,16 @@ export default class Nav extends Component {
         this.state = {
             topLocation: 0,
             skillsLocation: 0,
-            portfolioLocation: 0
+            portfolioLocation: 0,
+            aboutLocation: 0
         };
     }
 
     componentWillUpdate() {
+        this.styleNav();
+    }
+
+    styleNav() {
         //Nav Apperence
         if (window.scrollY >= 50) {
             document.getElementById('Nav').style.height = '60px';
@@ -33,6 +38,11 @@ export default class Nav extends Component {
             document.getElementById('portfolioBtn').classList.add('activeBtn');
         else
             document.getElementById('portfolioBtn').classList.remove('activeBtn');
+
+        if (this.props.aboutLocation !== null && this.props.aboutLocation.top <= window.innerHeight/2 && this.props.aboutLocation.bottom >= window.innerHeight/2)
+            document.getElementById('aboutBtn').classList.add('activeBtn');
+        else
+            document.getElementById('aboutBtn').classList.remove('activeBtn');
     }
 
     handleButtonClick(location) {
@@ -59,9 +69,14 @@ export default class Nav extends Component {
                         <div className="button-text">PORTOLIO</div>
                     </div>
 
-                    <div className="button unactiveBtn" id='aboutBtn' onClick={this.handleButtonClick.bind(this, 'aboutBtn')}>
+                    <div className="button unactiveBtn" id='aboutBtn' onClick={this.handleButtonClick.bind(this, this.props.aboutLocation)}>
                         <div className="centerer"></div>
                         <div className="button-text">ABOUT</div>
+                    </div>
+
+                    <div className="button unactiveBtn" id='contactBtn' onClick={this.handleButtonClick.bind(this, 'contactBtn')}>
+                        <div className="centerer"></div>
+                        <div className="button-text">CONTACT</div>
                     </div>
 
                 </div>

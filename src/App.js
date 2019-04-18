@@ -5,6 +5,7 @@ import Nav from "./components/Nav"
 import Home from "./components/Home";
 import Skills from "./components/Skills";
 import Portfolio from "./components/Portfolio";
+import About from "./components/About";
 
 import './App.scss';
 
@@ -12,7 +13,8 @@ class App extends Component {
     state = {
         topLocation: null,
         skillsLocation: null,
-        portfolioLocation: null
+        portfolioLocation: null,
+        aboutLocation: null
     };
 
     componentDidMount() {
@@ -29,7 +31,8 @@ class App extends Component {
         this.setState({
             topLocation: document.getElementById('App').getBoundingClientRect(),
             skillsLocation: document.getElementById('Skills').getBoundingClientRect(),
-            portfolioLocation: document.getElementById('Portfolio').getBoundingClientRect()
+            portfolioLocation: document.getElementById('Portfolio').getBoundingClientRect(),
+            aboutLocation: document.getElementById('About').getBoundingClientRect()
         });
     }
 
@@ -37,10 +40,16 @@ class App extends Component {
         return (
             <div className="App" id='App'>
             
-                <Nav topLocation={this.state.topLocation} skillsLocation={this.state.skillsLocation} portfolioLocation={this.state.portfolioLocation}/>
+                <Nav
+                    topLocation={this.state.topLocation}
+                    skillsLocation={this.state.skillsLocation}
+                    portfolioLocation={this.state.portfolioLocation}
+                    aboutLocation={this.state.aboutLocation}
+                />
                 <Home/>
                 <Skills id='Skills'/>
                 <Portfolio id='Portfolio'/>
+                <About id='About'/>
 
             </div>
         );

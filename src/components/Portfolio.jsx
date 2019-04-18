@@ -41,7 +41,7 @@ export default class Portfolio extends Component {
                             </div>
                             <div className="footer">
                                 <div className="title">
-                                    Project 1
+                                    OEP Room Rental
                                 </div>
                                 <div className="about">
                                     About Project 1
@@ -56,7 +56,7 @@ export default class Portfolio extends Component {
                             </div>
                             <div className="footer">
                                 <div className="title">
-                                    Project 2
+                                    Trak Nutition Tracker
                                 </div>
                                 <div className="about">
                                     About Project 2

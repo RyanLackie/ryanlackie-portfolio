@@ -2,10 +2,6 @@
     background: gainsboro;
 }
 
-.Portfolio .container-fluid {
-    max-width: 1200px;
-}
-
 .Portfolio .project {
     position: relative;
     display: inline-block;

@@ -34,7 +34,7 @@ export default class Skills extends Component {
 
                     <div className="row justify-content-center">
 
-                        <div className="skillsCard col-sm-12 col-md-4">
+                        <div className="skillsCard">
                             <img src={img1} className='image' alt='Web Application Development Img'></img>
                             <div className="header">
                                 Web Application Development
@@ -44,7 +44,7 @@ export default class Skills extends Component {
                             </div>
                         </div>
 
-                        <div className="skillsCard col-sm-12 col-md-4">
+                        <div className="skillsCard">
                             <img src={img2} className='image' alt='API Integration & Development Img'></img>
                             <div className="header">
                                 API Integration & Development
@@ -58,7 +58,7 @@ export default class Skills extends Component {
 
                     <div className="row justify-content-center">
 
-                        <div className="skillsCard col-sm-12 col-md-4">
+                        <div className="skillsCard">
                             <img src={img3} className='image' alt='Database Design & Development Img'></img>
                             <div className="header">
                                 Database Design & Development
@@ -68,7 +68,7 @@ export default class Skills extends Component {
                             </div>
                         </div>
 
-                        <div className="skillsCard col-sm-12 col-md-4">
+                        <div className="skillsCard">
                             <img src={img4} className='image' alt='Cloud Integration Img'></img>
                             <div className="header">Cloud Integration</div>
                             <div className="footer">
@@ -89,33 +89,33 @@ export default class Skills extends Component {
 
                     <div className="skillRow row justify-content-center">
 
-                        <div className="group col-sm-4 col-md-3">
+                        <div className="group">
                             <div className="header">Languages</div>
-                            <div className="info row justify-content-center">
-                                <div className="col-md-6">HTML</div>
-                                <div className="col-md-6">CSS</div>
-                                <div className="col-md-6">SCSS</div>
-                                <div className="col-md-6">JavaScript</div>
+                            <div className="info row">
+                                <div className="item">HTML</div>
+                                <div className="item">CSS</div>
+                                <div className="item">SCSS</div>
+                                <div className="item">JavaScript</div>
                             </div>
                         </div>
 
-                        <div className="group col-sm-4 col-md-3">
+                        <div className="group">
                             <div className="header">Frameworks</div>
-                            <div className="info row justify-content-center">
-                                <div className="col-md-6">Vue.js</div>
-                                <div className="col-md-6">React</div>
-                                <div className="col-md-6">Angular 2+</div>
-                                <div className="col-md-6">Bootstrap</div>
+                            <div className="info row">
+                                <div className="item">Vue.js</div>
+                                <div className="item">React</div>
+                                <div className="item">Angular 2+</div>
+                                <div className="item">Bootstrap</div>
                             </div>
                         </div>
 
-                        <div className="group col-sm-4 col-md-3">
+                        <div className="group">
                             <div className="header">Tools</div>
-                            <div className="info row justify-content-center">
-                                <div className="col-md-6">Git</div>
-                                <div className="col-md-6">jQuery</div>
-                                <div className="col-md-6">Webpack</div>
-                                <div className="col-md-6">Photoshop</div>
+                            <div className="info row">
+                                <div className="item">Git</div>
+                                <div className="item">jQuery</div>
+                                <div className="item">Webpack</div>
+                                <div className="item">Photoshop</div>
                             </div>
                         </div>
 
@@ -131,38 +131,38 @@ export default class Skills extends Component {
                 
                     <div className="skillRow row justify-content-center">
 
-                        <div className="group col-sm-4 col-md-3">
+                        <div className="group">
                             <div className="header">Languages</div>
-                            <div className="info row justify-content-center">
-                                <div className="col-md-6">JavaScript</div>
-                                <div className="col-md-6">Python</div>
-                                <div className="col-md-6">PHP</div>
-                                <div className="col-md-6">Java</div>
+                            <div className="info row">
+                                <div className="item">JavaScript</div>
+                                <div className="item">Python</div>
+                                <div className="item">PHP</div>
+                                <div className="item">Java</div>
                             </div>
                         </div>
 
-                        <div className="group col-sm-4 col-md-3">
+                        <div className="group">
                             <div className="header">Frameworks</div>
-                            <div className="info row justify-content-center">
-                                <div className="col-md-6">Express.js</div>
-                                <div className="col-md-6">Spring Boot</div>
+                            <div className="info row">
+                                <div className="item">Express.js</div>
+                                <div className="item">Spring Boot</div>
                             </div>
                         </div>
 
-                        <div className="group col-sm-4 col-md-3">
+                        <div className="group">
                             <div className="header">Tools</div>
-                            <div className="info row justify-content-center">
-                                <div className="col-md-6">Node.js</div>
-                                <div className="col-md-6">MySQL</div>
-                                <div className="col-md-6">npm</div>
-                                <div className="col-md-6">yarn</div>
-                                <div className="col-md-6">babel</div>
-                                <div className="col-md-6">JSON</div>
+                            <div className="info row">
+                                <div className="item">Node.js</div>
+                                <div className="item">MySQL</div>
+                                <div className="item">npm</div>
+                                <div className="item">yarn</div>
+                                <div className="item">babel</div>
+                                <div className="item">JSON</div>
                             </div>
                         </div>
 
                     </div>
-                </div>
+                </div>        
 
                 
             </div>
