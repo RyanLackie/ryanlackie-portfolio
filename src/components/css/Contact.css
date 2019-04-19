@@ -1,28 +1,42 @@
 .Contact {
     width: 100%;
-    height: calc(100vh - 60px);
+    height: 700px;
     background: gainsboro;
 }
 
-.Contact .inputContainer {
-    width: 90%;
-    margin: 0px auto;
+.Contact .message {
+    width: 100%;
+    color: gray;
     text-align: center;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .Contact .inputCol {
-    display: inline-block;
-    width: 500px;
-    height: 500px;
-    padding: 10px;
-    outline: 1px red solid;
+    margin-top: 60px;
+    text-align: center;
 }
 
-.Contact .inputContainer .input {
-    width: 100%;
+.Contact .smInput {
+    width: 98%;
     height: 50px;
-    margin-bottom: 20px;
+    margin: 0px 0px 25px 0px;
+    padding: 20px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
 }
-.Contact .inputContainer .areaInput {
+.Contact .lgInput {
+    width: 98%;
+    height: 200px;
+    padding: 20px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.Contact .buttonContainer {
     width: 100%;
+    text-align: center;
+}
+.Contact .sendBtn {
+    width: 300px;
 }
