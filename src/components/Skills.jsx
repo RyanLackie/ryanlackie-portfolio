@@ -38,14 +38,14 @@ export default class Skills extends Component {
 
     animationHandler() {
         for (var card = 1; card <= 4; card++) {
-            if (this.willAnimate('card' + card)) {
+            if (this.props.willAnimate('card' + card)) {
                 document.getElementById('card' + card).style.visibility = 'visible';
                 if (card%2 === 0)
                     document.getElementById('card' + card).classList.add('fadeInRight');
                 else
                     document.getElementById('card' + card).classList.add('fadeInLeft');
             }
-            if (!this.inFrame('card' + card)) {
+            if (!this.props.inFrame('card' + card)) {
                 document.getElementById('card' + card).style.visibility = 'hidden';
                 if (card%2 === 0)
                     document.getElementById('card' + card).classList.remove('fadeInRight');
@@ -55,39 +55,15 @@ export default class Skills extends Component {
         }
 
         for (var group = 1; group <= 6; group++) {
-            if (this.willAnimate('group' + group)) {
+            if (this.props.willAnimate('group' + group)) {
                 document.getElementById('group' + group).style.visibility = 'visible';
                 document.getElementById('group' + group).classList.add('zoomIn');
             }
-            if (!this.inFrame('group' + group)) {
+            if (!this.props.inFrame('group' + group)) {
                 document.getElementById('group' + group).style.visibility = 'hidden';
                 document.getElementById('group' + group).classList.remove('zoomIn');
             }
         }
-    }
-    willAnimate(id) {
-        var topOffSet = window.innerHeight*0.15;
-        var topOfScreen = window.scrollY + topOffSet;
-        var botOfScreen = topOfScreen + window.innerHeight - topOffSet*1.5;
-
-        var topOfElement = document.getElementById(id).getBoundingClientRect().top + window.scrollY;
-        var botOfElement = document.getElementById(id).getBoundingClientRect().bottom + window.scrollY;
-
-        if ((botOfElement >= topOfScreen) && (topOfElement <= botOfScreen))
-            return true;
-        return false;
-    }
-    inFrame(id) {
-        var topOffSet = 60;
-        var topOfScreen = window.scrollY + topOffSet;
-        var botOfScreen = topOfScreen + window.innerHeight - topOffSet;
-        
-        var topOfElement = document.getElementById(id).getBoundingClientRect().top + window.scrollY;
-        var botOfElement = document.getElementById(id).getBoundingClientRect().bottom + window.scrollY;
-
-        if ((botOfElement >= topOfScreen) && (topOfElement <= botOfScreen))
-            return true;
-        return false;
     }
 
     render() {

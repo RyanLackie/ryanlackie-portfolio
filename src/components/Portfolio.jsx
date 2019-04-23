@@ -13,39 +13,15 @@ export default class Portfolio extends Component {
     }
     animationHandler() {
         for (var project = 1; project <= 6; project++) {
-            if (this.willAnimate('project' + project)) {
+            if (this.props.willAnimate('project' + project)) {
                 document.getElementById('project' + project).style.visibility = 'visible';
                 document.getElementById('project' + project).classList.add('fadeIn');
             }
-            if (!this.inFrame('project' + project)) {
+            if (!this.props.inFrame('project' + project)) {
                 document.getElementById('project' + project).style.visibility = 'hidden';
                 document.getElementById('project' + project).classList.remove('fadeIn');
             }
         }
-    }
-    willAnimate(id) {
-        var topOffSet = window.innerHeight*0.15;
-        var topOfScreen = window.scrollY + topOffSet;
-        var botOfScreen = topOfScreen + window.innerHeight - topOffSet*1.5;
-
-        var topOfElement = document.getElementById(id).getBoundingClientRect().top + window.scrollY;
-        var botOfElement = document.getElementById(id).getBoundingClientRect().bottom + window.scrollY;
-
-        if ((botOfElement >= topOfScreen) && (topOfElement <= botOfScreen))
-            return true;
-        return false;
-    }
-    inFrame(id) {
-        var topOffSet = 60;
-        var topOfScreen = window.scrollY + topOffSet;
-        var botOfScreen = topOfScreen + window.innerHeight - topOffSet;
-
-        var topOfElement = document.getElementById(id).getBoundingClientRect().top + window.scrollY;
-        var botOfElement = document.getElementById(id).getBoundingClientRect().bottom + window.scrollY;
-
-        if ((botOfElement >= topOfScreen) && (topOfElement <= botOfScreen))
-            return true;
-        return false;
     }
 
     openLink = (url) => {

@@ -2,56 +2,32 @@ import React, { Component } from "react";
 
 import './css/About.scss';
 
-export default class Portfolio extends Component {
+export default class About extends Component {
     componentWillUpdate() {
         this.animationHandler();
     }
     animationHandler() {
         for (var icon = 1; icon <= 2; icon++) {
-            if (this.willAnimate('icon' + icon)) {
+            if (this.props.willAnimate('icon' + icon)) {
                 document.getElementById('icon' + icon).style.visibility = 'visible';
                 document.getElementById('icon' + icon).classList.add('rollIn');
             }
-            if (!this.inFrame('icon' + icon)) {
+            if (!this.props.inFrame('icon' + icon)) {
                 document.getElementById('icon' + icon).style.visibility = 'hidden';
                 document.getElementById('icon' + icon).classList.remove('rollIn');
             }
         }
 
         for (var text = 1; text <= 3; text++) {
-            if (this.willAnimate('text' + text)) {
+            if (this.props.willAnimate('text' + text)) {
                 document.getElementById('text' + text).style.visibility = 'visible';
                 document.getElementById('text' + text).classList.add('fadeInUp');
             }
-            if (!this.inFrame('text' + text)) {
+            if (!this.props.inFrame('text' + text)) {
                 document.getElementById('text' + text).style.visibility = 'hidden';
                 document.getElementById('text' + text).classList.remove('fadeInUp');
             }
         }
-    }
-    willAnimate(id) {
-        var topOffSet = window.innerHeight*0.15;
-        var topOfScreen = window.scrollY + topOffSet;
-        var botOfScreen = topOfScreen + window.innerHeight - topOffSet*1.5;
-
-        var topOfElement = document.getElementById(id).getBoundingClientRect().top + window.scrollY;
-        var botOfElement = document.getElementById(id).getBoundingClientRect().bottom + window.scrollY;
-
-        if ((botOfElement >= topOfScreen) && (topOfElement <= botOfScreen))
-            return true;
-        return false;
-    }
-    inFrame(id) {
-        var topOffSet = 60;
-        var topOfScreen = window.scrollY + topOffSet;
-        var botOfScreen = topOfScreen + window.innerHeight - topOffSet;
-
-        var topOfElement = document.getElementById(id).getBoundingClientRect().top + window.scrollY;
-        var botOfElement = document.getElementById(id).getBoundingClientRect().bottom + window.scrollY;
-
-        if ((botOfElement >= topOfScreen) && (topOfElement <= botOfScreen))
-            return true;
-        return false;
     }
 
     openLink = (url) => {

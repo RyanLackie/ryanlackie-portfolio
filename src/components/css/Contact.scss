@@ -1,0 +1,117 @@
+.Contact {
+    width: 100%;
+    min-height: 700px;
+    background: gainsboro;
+}
+
+.Contact .message {
+    width: 100%;
+    color: gray;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.Contact .smInputCol {
+    margin-top: 60px;
+    text-align: center;
+}
+.Contact .lgInputCol {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.Contact .smInput {
+    width: 98%;
+    height: 50px;
+    margin-bottom: 25px;
+    padding: 20px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+.Contact input::placeholder {
+    color: lightgray;
+}
+.Contact .lgInput {
+    width: 98%;
+    height: 200px;
+    margin-bottom: 25px;
+    padding: 20px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+.Contact textarea::placeholder {
+    color: lightgray;
+}
+@media only screen and (max-width: 991px) {   /*when the browser window is 991px wide or less:*/
+    .Contact .lgInputCol {
+        margin-top: 20px;
+    }
+    .Contact .smInput {
+        margin-bottom: 5px;
+    }
+}
+
+$buttonBackground: mediumseagreen;
+$circleBackground: mediumseagreen;
+$textColor: white;
+.Contact .buttonContainer {
+    width: 100%;
+    text-align: center;
+}
+.Contact .buttonContainer .button {
+    width: 250px;
+    height: 80px;
+    margin: 0px auto;
+    background: $buttonBackground;
+    border: 2px $buttonBackground solid;
+    border-radius: 6px;
+    transition: all .3s cubic-bezier(0.67, 0.17, 0.40, 0.83);
+    cursor: pointer;
+    outline: none;
+}
+.Contact .buttonContainer .button, .tick {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+.Contact .buttonContainer .button svg {
+    transform: rotate(180deg);
+    transition: all .5s;
+}
+.Contact .buttonContainer .button__circle {
+    width: 100px;
+    height: 100px;
+    background: $circleBackground;
+    border: 2px $circleBackground solid;
+    border-radius: 50%;
+    transform: rotate(-180deg);
+}
+.Contact .buttonContainer .tick {
+    color: $textColor;
+    font-size: 2em;
+    transition: all .9s;
+}
+
+.Contact .alert {
+    position: fixed;
+    top: 80px;
+    right: -350px;
+    width: 350px;
+    cursor: default;
+    transition: right 0.5s;
+    visibility: hidden;
+}
+.Contact .alert .close {
+    float: left;
+    margin: 8px 10px 0px -5px;
+    cursor: pointer;
+}
+.Contact .alert .message {
+    float: right;
+    width: 280px;
+    text-align: left;
+}
