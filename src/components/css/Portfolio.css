@@ -9,6 +9,7 @@
     height: 320px;
     background: white;
     margin: 0px 20px 40px 20px;
+    visibility: hidden;
 }
 
 .Portfolio .project .imageContainer {
@@ -16,7 +17,7 @@
     width: 100%;
     height: 70%;
     margin-bottom: 15px;
-    cursor: pointer;
+    cursor: default;
 }
 .Portfolio .project .image {
     position: absolute;
@@ -25,7 +26,6 @@
     background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top;
 }
 .Portfolio .project .overlay {
     position: absolute;
@@ -36,7 +36,7 @@
     transition: opacity 0.3s;
 }
 .Portfolio .project .overlay:hover {
-    opacity: 0.7;
+    opacity: 0.95;
 }
 .Portfolio .project .overlay:hover .buttonContainer .linkBtn {
     opacity: 1;
@@ -58,6 +58,7 @@
     font-size: 15px;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
 }
 .Portfolio .project .overlay .buttonContainer .linkBtn:hover {
     background: white;

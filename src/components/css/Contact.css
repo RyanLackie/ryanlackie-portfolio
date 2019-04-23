@@ -24,6 +24,10 @@
     padding: 20px;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+.Contact input::placeholder {
+    color: lightgray;
 }
 .Contact .lgInput {
     width: 98%;
@@ -31,6 +35,10 @@
     padding: 20px;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+.Contact textarea::placeholder {
+    color: lightgray;
 }
 
 .Contact .buttonContainer {
@@ -39,4 +47,12 @@
 }
 .Contact .sendBtn {
     width: 300px;
+    height: 40px;
+    color: white;
+    background: gold;
+    border: 1px gold solid;
+}
+.Contact .sendBtn:hover {
+    background: darkgoldenrod;
+    border: 1px darkgoldenrod solid;
 }

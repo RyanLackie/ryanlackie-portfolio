@@ -2,21 +2,55 @@ import React, { Component } from "react";
 
 import './css/Portfolio.css';
 
-import img1 from '../assets/web-icon.png';
-import img2 from '../assets/api-icon.png';
-import img3 from '../assets/database-icon.png';
-import img4 from '../assets/cloud-icon.png';
+import img1 from '../assets/OEP.png';
+import img2 from '../assets/trak.png';
+import img3 from '../assets/rpg.png';
+import img4 from '../assets/cell.png';
 
 export default class Portfolio extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            
-        };
+    componentWillUpdate() {
+        this.animationHandler();
+    }
+    animationHandler() {
+        for (var project = 1; project <= 6; project++) {
+            if (this.willAnimate('project' + project)) {
+                document.getElementById('project' + project).style.visibility = 'visible';
+                document.getElementById('project' + project).classList.add('fadeIn');
+            }
+            if (!this.inFrame('project' + project)) {
+                document.getElementById('project' + project).style.visibility = 'hidden';
+                document.getElementById('project' + project).classList.remove('fadeIn');
+            }
+        }
+    }
+    willAnimate(id) {
+        var topOffSet = window.innerHeight*0.15;
+        var topOfScreen = window.scrollY + topOffSet;
+        var botOfScreen = topOfScreen + window.innerHeight - topOffSet*1.5;
+
+        var topOfElement = document.getElementById(id).getBoundingClientRect().top + window.scrollY;
+        var botOfElement = document.getElementById(id).getBoundingClientRect().bottom + window.scrollY;
+
+        if ((botOfElement >= topOfScreen) && (topOfElement <= botOfScreen))
+            return true;
+        return false;
+    }
+    inFrame(id) {
+        var topOffSet = 60;
+        var topOfScreen = window.scrollY + topOffSet;
+        var botOfScreen = topOfScreen + window.innerHeight - topOffSet;
+
+        var topOfElement = document.getElementById(id).getBoundingClientRect().top + window.scrollY;
+        var botOfElement = document.getElementById(id).getBoundingClientRect().bottom + window.scrollY;
+
+        if ((botOfElement >= topOfScreen) && (topOfElement <= botOfScreen))
+            return true;
+        return false;
     }
 
-    projectClicked(path) {
-        alert();
+    openLink = (url) => {
+        var win = window.open(url, '_blank');
+        win.focus();
     }
 
     render() {
@@ -34,13 +68,13 @@ export default class Portfolio extends Component {
 
                     <div className="row justify-content-center">
 
-                        <div className="project">
-                            <div className="imageContainer" onClick={this.projectClicked.bind(this, 'path')}>
-                                <div className='image' style={{backgroundImage: `url(${img1})`}}></div>
+                        <div className="project animated" id='project1'>
+                            <div className="imageContainer">
+                                <div className='image' style={{backgroundImage: `url(${img1})`, backgroundPosition: 'top center'}}></div>
                                 <div className="overlay">
                                     <div className="buttonContainer">
-                                        <button className="linkBtn">See Live</button>
-                                        <button className="linkBtn">See Code</button>
+                                        <button className="linkBtn" onClick={this.openLink.bind(this, "")}>See Live</button>
+                                        <button className="linkBtn" onClick={this.openLink.bind(this, "https://github.com/RyanLackie/OneEpicPlace-WebsiteSchedulingExtension")}>See Code</button>
                                     </div>
                                 </div>
                             </div>
@@ -49,18 +83,18 @@ export default class Portfolio extends Component {
                                     OEP Room Rental
                                 </div>
                                 <div className="about">
-                                    About Project 1
+                                    HTML, CSS, JavaScript, Vue.js, Express.js, Node.js, MySQL
                                 </div>
                             </div>
                         </div>
 
-                        <div className="project">
-                            <div className="imageContainer" onClick={this.projectClicked.bind(this, 'path')}>
-                                <div className='image' style={{backgroundImage: `url(${img2})`}}></div>
+                        <div className="project animated" id='project2'>
+                            <div className="imageContainer">
+                                <div className='image' style={{backgroundImage: `url(${img2})`, backgroundPosition: 'top left'}}></div>
                                 <div className="overlay">
                                     <div className="buttonContainer">
-                                        <button className="linkBtn">See Live</button>
-                                        <button className="linkBtn">See Code</button>
+                                        <button className="linkBtn" onClick={this.openLink.bind(this, "")}>See Live</button>
+                                        <button className="linkBtn" onClick={this.openLink.bind(this, "https://github.com/RyanLackie/WebProgramming-FinalProject")}>See Code</button>
                                     </div>
                                 </div>
                             </div>
@@ -69,47 +103,87 @@ export default class Portfolio extends Component {
                                     Trak Nutition Tracker
                                 </div>
                                 <div className="about">
-                                    About Project 2
+                                    HTML, CSS, JavaScript, Vue.js, Express.js, Node.js, MySQL
                                 </div>
                             </div>
                         </div>
 
-                        <div className="project">
-                            <div className="imageContainer" onClick={this.projectClicked.bind(this, 'path')}>
-                                <div className='image' style={{backgroundImage: `url(${img3})`}}></div>
+                        <div className="project animated" id='project3'>
+                            <div className="imageContainer">
+                                <div className='image' style={{backgroundImage: `url(${img3})`, backgroundPosition: 'top center'}}></div>
                                 <div className="overlay">
                                     <div className="buttonContainer">
-                                        <button className="linkBtn">See Live</button>
-                                        <button className="linkBtn">See Code</button>
+                                        <button className="linkBtn" onClick={this.openLink.bind(this, "")}>See Live</button>
+                                        <button className="linkBtn" onClick={this.openLink.bind(this, "https://github.com/RyanLackie/Android-TurnBasedGame")}>See Code</button>
                                     </div>
                                 </div>
                             </div>
                             <div className="footer">
                                 <div className="title">
-                                    Project 3
+                                    Turn Based Game
                                 </div>
                                 <div className="about">
-                                    About Project 3
+                                    Java, XML, Gradle, LibGDX
                                 </div>
                             </div>
                         </div>
 
-                        <div className="project">
-                            <div className="imageContainer" onClick={this.projectClicked.bind(this, 'path')}>
+                        <div className="project animated" id='project4'>
+                            <div className="imageContainer">
                                 <div className='image' style={{backgroundImage: `url(${img4})`}}></div>
                                 <div className="overlay">
                                     <div className="buttonContainer">
-                                        <button className="linkBtn">See Live</button>
-                                        <button className="linkBtn">See Code</button>
+                                        <button className="linkBtn" onClick={this.openLink.bind(this, "")}>See Live</button>
+                                        <button className="linkBtn" onClick={this.openLink.bind(this, "https://github.com/RyanLackie/Android-CellGame")}>See Code</button>
                                     </div>
                                 </div>
                             </div>
                             <div className="footer">
                                 <div className="title">
-                                    Project 4
+                                    Cell Game
                                 </div>
                                 <div className="about">
-                                    About Project 4
+                                    Java, XML, Gradle, LibGDX
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="project animated" id='project5'>
+                            <div className="imageContainer">
+                                <div className='image' style={{backgroundImage: `url(${img4})`}}></div>
+                                <div className="overlay">
+                                    <div className="buttonContainer">
+                                        <button className="linkBtn" onClick={this.openLink.bind(this, "")}>See Live</button>
+                                        <button className="linkBtn" onClick={this.openLink.bind(this, "")}>See Code</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="footer">
+                                <div className="title">
+                                    Jailbird
+                                </div>
+                                <div className="about">
+                                    Java
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="project animated" id='project6'>
+                            <div className="imageContainer">
+                                <div className='image' style={{backgroundImage: `url(${img4})`}}></div>
+                                <div className="overlay">
+                                    <div className="buttonContainer">
+                                        <button className="linkBtn" onClick={this.openLink.bind(this, "")}>See Live</button>
+                                        <button className="linkBtn" onClick={this.openLink.bind(this, "")}>See Code</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="footer">
+                                <div className="title">
+                                    Snake
+                                </div>
+                                <div className="about">
+                                    Java, Python
                                 </div>
                             </div>
                         </div>

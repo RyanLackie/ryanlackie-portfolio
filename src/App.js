@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 //import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 
-import Nav from "./components/Nav"
+import Nav from "./components/Nav";
 import Home from "./components/Home";
 import Skills from "./components/Skills";
 import Portfolio from "./components/Portfolio";
 import About from "./components/About";
-import Contact from "./components/Contact"
+import Contact from "./components/Contact";
 
 import './App.scss';
+import './animate.css';
 
 class App extends Component {
     state = {
@@ -20,18 +21,18 @@ class App extends Component {
     };
 
     componentDidMount() {
-        this.updateLocations();
-        window.addEventListener('scroll', this.updateLocations);
-        window.addEventListener('resize', this.updateLocations);
+        this.update();
+        window.addEventListener('scroll', this.update);
+        window.addEventListener('resize', this.update);
     }
     componentWillUnmount() {
-        window.removeEventListener('scroll', this.updateLocations);
-        window.removeEventListener('resize', this.updateLocations);
+        window.removeEventListener('scroll', this.update);
+        window.removeEventListener('resize', this.update);
     }
 
-    updateLocations = () => {
+    update = () => {
         this.setState({
-            topLocation: document.getElementById('App').getBoundingClientRect(),
+            topLocation: document.getElementById('Home').getBoundingClientRect(),
             skillsLocation: document.getElementById('Skills').getBoundingClientRect(),
             portfolioLocation: document.getElementById('Portfolio').getBoundingClientRect(),
             aboutLocation: document.getElementById('About').getBoundingClientRect(),
@@ -39,9 +40,13 @@ class App extends Component {
         });
     }
 
+    test = () => {
+        
+    }
+
     render() {
         return (
-            <div className="App" id='App'>
+            <div className="App">
             
                 <Nav
                     topLocation={this.state.topLocation}
@@ -51,10 +56,10 @@ class App extends Component {
                     contactLocation={this.state.contactLocation}
                 />
                 <Home/>
-                <Skills id='Skills'/>
-                <Portfolio id='Portfolio'/>
-                <About id='About'/>
-                <Contact id='Contact'/>
+                <Skills/>
+                <Portfolio/>
+                <About/>
+                <Contact/>
 
             </div>
         );

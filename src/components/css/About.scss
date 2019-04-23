@@ -17,6 +17,7 @@ $background: white;
     border: 2px $forground solid;
     background: $background;
     color: $forground;
+    visibility: hidden;
 }
 .About .fa:hover {
     background: $forground;
@@ -32,4 +33,5 @@ $background: white;
     margin-bottom: 20px;
     font-size: 17px;
     font-family: 'Montserrat', sans-serif;
+    visibility: hidden;
 }

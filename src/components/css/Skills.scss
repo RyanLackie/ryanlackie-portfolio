@@ -1,3 +1,11 @@
+.test {
+    position: absolute;
+    width: 98%;
+    margin: 0px 1%;
+    //outline: 1px red solid;
+    z-index: 100;
+}
+
 /*
     Skills Cards
 */
@@ -9,6 +17,7 @@
     padding: 0px 15px;
     text-align: center;
     color: black;
+    visibility: hidden;
 }
 .Skills .skillsCard .image {
     width: 100px;
@@ -63,6 +72,8 @@
     box-shadow:0 10px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     color: white;
     background: indigo;
+    cursor: default;
+    visibility: hidden;
 }
 .Skills .skillRow .group .header {
     width: 100%;

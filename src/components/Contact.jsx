@@ -3,13 +3,6 @@ import React, { Component } from "react";
 import './css/Contact.css';
 
 export default class Portfolio extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            
-        };
-    }
-
     render() {
         return (
             <div className="Contact section" id='Contact'>
@@ -46,7 +39,7 @@ export default class Portfolio extends Component {
                     </div>
 
                     <div className="buttonContainer">
-                        <button className='btn btn-warning sendBtn'>Send Message</button>
+                        <button className='sendBtn'>Send Message</button>
                     </div>
 
                 </div>
