@@ -49,8 +49,10 @@ export default class Home extends Component {
                 </div>
 
                 <div className="icons">
-                    <div onClick={this.openLink.bind(this, "https://www.linkedin.com/in/ryanlackie/")} className="fa fa-linkedin"></div>
-                    <div onClick={this.openLink.bind(this, "https://github.com/RyanLackie")} className="fa fa-github"></div>
+                    <div onClick={this.openLink.bind(this, "https://www.linkedin.com/in/ryanlackie/")}
+                    className="fa fa-linkedin animated rollIn"></div>
+                    <div onClick={this.openLink.bind(this, "https://github.com/RyanLackie")}
+                    className="fa fa-github animated rollIn"></div>
                 </div>
 
             </div>

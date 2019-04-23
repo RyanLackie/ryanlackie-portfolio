@@ -28,12 +28,6 @@ export default class Skills extends Component {
 
         //console.log('amt ' + amt + '   margin ' + document.getElementById('frontend').style.marginBottom);
         this.animationHandler();
-
-        /*
-        var topOffSet = window.innerHeight*0.15;
-        document.getElementById('test').style.top = window.scrollY + topOffSet + 'px';
-        document.getElementById('test').style.height = window.innerHeight - topOffSet*1.2 + 'px';
-        */
     }
 
     animationHandler() {
@@ -76,8 +70,6 @@ export default class Skills extends Component {
                         <div className="sectionLabelLine"></div>
                     </div>
                 </div>
-
-                <div className="test" id='test'></div>
                 
                 <div className="container-fluid">
 

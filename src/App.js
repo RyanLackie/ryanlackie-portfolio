@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Nav from "./components/Nav";
 import Home from "./components/Home";
@@ -7,8 +6,6 @@ import Skills from "./components/Skills";
 import Portfolio from "./components/Portfolio";
 import About from "./components/About";
 import Contact from "./components/Contact";
-
-import ThankYou from "./components/ThankYou";
 
 import './App.scss';
 import './animate.css';
@@ -70,26 +67,22 @@ class App extends Component {
 
     render() {
         return (
-            <Router>
-                <div className="App">
-                
-                    <Nav
-                        topLocation={this.state.topLocation}
-                        skillsLocation={this.state.skillsLocation}
-                        portfolioLocation={this.state.portfolioLocation}
-                        aboutLocation={this.state.aboutLocation}
-                        contactLocation={this.state.contactLocation}
-                    />
-                    <Home/>
-                    <Skills willAnimate={this.willAnimate} inFrame={this.inFrame}/>
-                    <Portfolio willAnimate={this.willAnimate} inFrame={this.inFrame}/>
-                    <About willAnimate={this.willAnimate} inFrame={this.inFrame}/>
-                    <Contact willAnimate={this.willAnimate} inFrame={this.inFrame} Router={this.Router}/>
+            <div className="App">
+            
+                <Nav
+                    topLocation={this.state.topLocation}
+                    skillsLocation={this.state.skillsLocation}
+                    portfolioLocation={this.state.portfolioLocation}
+                    aboutLocation={this.state.aboutLocation}
+                    contactLocation={this.state.contactLocation}
+                />
+                <Home/>
+                <Skills willAnimate={this.willAnimate} inFrame={this.inFrame}/>
+                <Portfolio willAnimate={this.willAnimate} inFrame={this.inFrame}/>
+                <About willAnimate={this.willAnimate} inFrame={this.inFrame}/>
+                <Contact willAnimate={this.willAnimate} inFrame={this.inFrame}/>
 
-                    <Route path="/ThankYou/" component={ThankYou} />
-
-                </div>
-            </Router>
+            </div>
         );
     }
 }

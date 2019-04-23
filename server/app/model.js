@@ -1,10 +1,8 @@
 var nodemailer = require('nodemailer');
 
 class Model {
-    constructor() {}
 
     sendMessage(name, email, phoneNumber, message, call_back) {
-        /*
         var transporter = nodemailer.createTransport({
             service: 'gmail',
                 auth: {
@@ -30,8 +28,6 @@ class Model {
                 call_back('100');
             }
         });
-        */
-       call_back('100');
     }
     
 }
