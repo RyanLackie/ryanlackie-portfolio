@@ -26,22 +26,18 @@ export default class Contact extends Component {
                 
             }
         );
+
+        document.getElementById('alert').style.right = '10px';
+        document.getElementById('alert').style.visibility = 'visible';
         setTimeout(function() {
             document.getElementById('name').value = '';
             document.getElementById('email').value = '';
             document.getElementById('phoneNumber').value = '';
             document.getElementById('message').value = '';
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-            document.getElementById('alert').style.right = '10px';
-            document.getElementById('alert').style.visibility = 'visible';
-        }, 300);
-        setTimeout(function() {
+
             document.getElementById('tick').innerHTML = "Submit";
             document.getElementById('button').classList.toggle('button__circle');
-        }, 1500);
+        }, 1000);
     }
 
     hideAlert() {
