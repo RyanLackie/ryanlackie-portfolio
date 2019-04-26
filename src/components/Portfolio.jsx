@@ -6,6 +6,7 @@ import img1 from '../assets/OEP.png';
 import img2 from '../assets/trak.png';
 import img3 from '../assets/rpg.png';
 import img4 from '../assets/cell.png';
+import img5 from '../assets/jailbird.png';
 
 export default class Portfolio extends Component {
     componentWillUpdate() {
@@ -27,6 +28,9 @@ export default class Portfolio extends Component {
     openLink = (url) => {
         var win = window.open(url, '_blank');
         win.focus();
+    }
+    download = (url) => {
+        window.download();
     }
 
     render() {
@@ -126,11 +130,11 @@ export default class Portfolio extends Component {
 
                         <div className="project animated" id='project5'>
                             <div className="imageContainer">
-                                <div className='image' style={{backgroundImage: `url(${img4})`}}></div>
+                                <div className='image' style={{backgroundImage: `url(${img5})`}}></div>
                                 <div className="overlay">
                                     <div className="buttonContainer">
                                         <button className="linkBtn" onClick={this.openLink.bind(this, "")}>See Live</button>
-                                        <button className="linkBtn" onClick={this.openLink.bind(this, "")}>See Code</button>
+                                        <button className="linkBtn" onClick={this.openLink.bind(this, "https://github.com/RyanLackie/JailBird")}>See Code</button>
                                     </div>
                                 </div>
                             </div>
