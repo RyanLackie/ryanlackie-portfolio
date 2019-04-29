@@ -7,6 +7,7 @@ import img2 from '../assets/trak.png';
 import img3 from '../assets/rpg.png';
 import img4 from '../assets/cell.png';
 import img5 from '../assets/jailbird.png';
+import img6 from '../assets/snake.png';
 
 export default class Portfolio extends Component {
     componentWillUpdate() {
@@ -29,8 +30,10 @@ export default class Portfolio extends Component {
         var win = window.open(url, '_blank');
         win.focus();
     }
-    download = (url) => {
-        window.download();
+    openLink = (id) => {
+        for (var i = 0; i < id.length; i++) {
+            document.getElementById(id[i]).click();
+        }
     }
 
     render() {
@@ -53,7 +56,7 @@ export default class Portfolio extends Component {
                                 <div className='image' style={{backgroundImage: `url(${img1})`, backgroundPosition: 'top center'}}></div>
                                 <div className="overlay">
                                     <div className="buttonContainer">
-                                        <button className="linkBtn" onClick={this.openLink.bind(this, "")}>See Live</button>
+                                        <button className="linkBtn" onClick={this.openLink.bind(this, "http://134.209.119.199")}>See Live</button>
                                         <button className="linkBtn" onClick={this.openLink.bind(this, "https://github.com/RyanLackie/OneEpicPlace-WebsiteSchedulingExtension")}>See Code</button>
                                     </div>
                                 </div>
@@ -90,17 +93,16 @@ export default class Portfolio extends Component {
 
                         <div className="project animated" id='project3'>
                             <div className="imageContainer">
-                                <div className='image' style={{backgroundImage: `url(${img3})`, backgroundPosition: 'top center'}}></div>
+                                <div className='image' style={{backgroundImage: `url(${img3})`, backgroundSize: '100%', backgroundPosition: 'center'}}></div>
                                 <div className="overlay">
                                     <div className="buttonContainer">
-                                        <button className="linkBtn" onClick={this.openLink.bind(this, "")}>See Live</button>
                                         <button className="linkBtn" onClick={this.openLink.bind(this, "https://github.com/RyanLackie/Android-TurnBasedGame")}>See Code</button>
                                     </div>
                                 </div>
                             </div>
                             <div className="footer">
                                 <div className="title">
-                                    Turn Based Game
+                                    Android - Turn Game
                                 </div>
                                 <div className="about">
                                     Java, XML, Gradle, LibGDX
@@ -110,17 +112,16 @@ export default class Portfolio extends Component {
 
                         <div className="project animated" id='project4'>
                             <div className="imageContainer">
-                                <div className='image' style={{backgroundImage: `url(${img4})`}}></div>
+                                <div className='image' style={{backgroundImage: `url(${img4})`, backgroundSize: '100%', backgroundPosition: 'center'}}></div>
                                 <div className="overlay">
                                     <div className="buttonContainer">
-                                        <button className="linkBtn" onClick={this.openLink.bind(this, "")}>See Live</button>
                                         <button className="linkBtn" onClick={this.openLink.bind(this, "https://github.com/RyanLackie/Android-CellGame")}>See Code</button>
                                     </div>
                                 </div>
                             </div>
                             <div className="footer">
                                 <div className="title">
-                                    Cell Game
+                                    Android - Cell Game
                                 </div>
                                 <div className="about">
                                     Java, XML, Gradle, LibGDX
@@ -133,14 +134,16 @@ export default class Portfolio extends Component {
                                 <div className='image' style={{backgroundImage: `url(${img5})`}}></div>
                                 <div className="overlay">
                                     <div className="buttonContainer">
-                                        <button className="linkBtn" onClick={this.openLink.bind(this, "")}>See Live</button>
+                                        <a href="../files/test.txt" download>
+                                            <button className="linkBtn">Download</button>
+                                        </a>
                                         <button className="linkBtn" onClick={this.openLink.bind(this, "https://github.com/RyanLackie/JailBird")}>See Code</button>
                                     </div>
                                 </div>
                             </div>
                             <div className="footer">
                                 <div className="title">
-                                    Jailbird
+                                    JailBird
                                 </div>
                                 <div className="about">
                                     Java
@@ -150,17 +153,19 @@ export default class Portfolio extends Component {
 
                         <div className="project animated" id='project6'>
                             <div className="imageContainer">
-                                <div className='image' style={{backgroundImage: `url(${img4})`}}></div>
+                                <div className='image' style={{backgroundImage: `url(${img6})`, backgroundSize: '105%', backgroundPosition: 'center'}}></div>
                                 <div className="overlay">
                                     <div className="buttonContainer">
-                                        <button className="linkBtn" onClick={this.openLink.bind(this, "")}>See Live</button>
-                                        <button className="linkBtn" onClick={this.openLink.bind(this, "")}>See Code</button>
+                                        <a href='../files/Snake Games.zip' download>
+                                            <button className="linkBtn">Download</button>
+                                        </a>
+                                        <button className="linkBtn" onClick={this.openLink.bind(this, "https://github.com/RyanLackie/SnakeGame")}>See Code</button>
                                     </div>
                                 </div>
                             </div>
                             <div className="footer">
                                 <div className="title">
-                                    Snake
+                                    Snake Games
                                 </div>
                                 <div className="about">
                                     Java, Python

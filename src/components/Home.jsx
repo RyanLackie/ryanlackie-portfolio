@@ -29,30 +29,35 @@ export default class Home extends Component {
                     <div className="hero" id='hero'></div>
                 </div>
 
-                <div className="center">
+                <div className="centerContainer">
 
-                    <div className="text">
-                        <b>Full-Stack</b>
-                        <br/>
-                        <b>Developer</b>
+                    <div className='centerer'></div>
+            
+                    <div className="center">
+
+                        <div className="text">
+                            <b>Ryan Lackie</b>
+                            <br/>
+                            <b>Full-Stack Developer</b>
+                        </div>
+
+                        <div className="buttons">
+                            <div className="button" onClick={this.openLink.bind(this, "https://drive.google.com/open?id=13kX1LcacyBnpHS0BxnEq-Q4OqFdDYtzX")}>
+                                Resume
+                            </div>
+                            <div className="button" onClick={this.scroll}>
+                                See More
+                            </div>
+                        </div>
+
                     </div>
 
-                    <div className="buttons">
-                        <div className="button" onClick={this.openLink.bind(this, "https://drive.google.com/open?id=13kX1LcacyBnpHS0BxnEq-Q4OqFdDYtzX")}>
-                            Resume
-                        </div>
-                        <div className="button" onClick={this.scroll}>
-                            See More
-                        </div>
+                    <div className="icons">
+                        <div onClick={this.openLink.bind(this, "https://www.linkedin.com/in/ryanlackie/")}
+                        className="fa fa-linkedin animated rollIn"></div>
+                        <div onClick={this.openLink.bind(this, "https://github.com/RyanLackie")}
+                        className="fa fa-github animated rollIn"></div>
                     </div>
-
-                </div>
-
-                <div className="icons">
-                    <div onClick={this.openLink.bind(this, "https://www.linkedin.com/in/ryanlackie/")}
-                    className="fa fa-linkedin animated rollIn"></div>
-                    <div onClick={this.openLink.bind(this, "https://github.com/RyanLackie")}
-                    className="fa fa-github animated rollIn"></div>
                 </div>
 
             </div>

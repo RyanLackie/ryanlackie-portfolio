@@ -59,6 +59,7 @@
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
+    text-decoration: none;
 }
 .Portfolio .project .overlay .buttonContainer .linkBtn:hover {
     background: white;

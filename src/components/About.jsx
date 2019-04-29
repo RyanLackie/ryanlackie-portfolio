@@ -61,15 +61,15 @@ export default class About extends Component {
                     </div>
 
                     <div className="text animated" id='text2'>
-                        I pride myself on having a strong work ethic and always have an eagerness to learn more.
-                        I have a strong passion for creation and have been thrilled ever since I started my career in Software Development. 
-                        I have had experience in a lot of different aspects in the development life cycle and have worn a lot of hats for a 
-                        startup I’ve worked for from Front-end, Back-end, to Dev-ops to get everything working the way it’s supposed to. 
+                        I have a strong passion for creation and have been thrilled ever since I started my career in Software Development.
+                        I pride myself on having a strong work ethic and always have an eagerness to learn more. 
+                        While working with a startup I have had experience many different aspects in the development 
+                        life cycle and have worn a lot of hats from Front-end, Back-end, to Dev-ops.
                     </div>
 
                     <div className="text animated" id='text3'>
-                        I have 2+ years of development experience building Full-stack products from scratch, developing and integrating APIs, 
-                        and working with databases and cloud platforms.
+                        I have 2+ years of development experience building Full-stack products from the ground up, 
+                        developing and integrating APIs, and working with databases and cloud platforms.
                     </div>
 
                 </div>
