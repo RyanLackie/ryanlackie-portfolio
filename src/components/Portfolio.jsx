@@ -30,11 +30,6 @@ export default class Portfolio extends Component {
         var win = window.open(url, '_blank');
         win.focus();
     }
-    openLink = (id) => {
-        for (var i = 0; i < id.length; i++) {
-            document.getElementById(id[i]).click();
-        }
-    }
 
     render() {
         return (
@@ -134,7 +129,7 @@ export default class Portfolio extends Component {
                                 <div className='image' style={{backgroundImage: `url(${img5})`}}></div>
                                 <div className="overlay">
                                     <div className="buttonContainer">
-                                        <a href="../files/test.txt" download>
+                                        <a href="../files/JailBird.jar" download>
                                             <button className="linkBtn">Download</button>
                                         </a>
                                         <button className="linkBtn" onClick={this.openLink.bind(this, "https://github.com/RyanLackie/JailBird")}>See Code</button>
