@@ -1,9 +1,5 @@
 $min-height: 500px;
 .Home {
-    min-height: $min-height;
-}
-
-.Home .landing {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -12,13 +8,17 @@ $min-height: 500px;
 
 .Home .heroContainer {
     position: absolute;
+    display: flex;
     top: 0px;
     width: 100%;
     height: 100vh;
     min-height: $min-height;
     overflow: hidden;
+    align-items: center;
+    justify-content: center;
 }
 .Home .heroContainer .hero {
+    position: absolute;
     width: 100%;
     height: 100vh;
     min-height: $min-height;
@@ -29,36 +29,24 @@ $min-height: 500px;
     transform: scale(1.2);
 }
 
-.Home .centerContainer {
-    position: absolute;
-    top: 0;
+.Home .heroContainer .centerContainer {
+    position: relative;
+    display: inline-block;
     width: 100%;
-    height: 100vh;
-    min-height: $min-height;
-    padding-top: 16%;
-    text-align: center;
-}
-.Home .centerContainer .centerer {
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-}
-.Home .centerContainer .center {
-    display: inline-block;
     text-align: center;
 }
 
-.Home .centerContainer .center .text {
+.Home .heroContainer .centerContainer .text {
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 60px;
     margin-bottom: 50px;
 }
-.Home .centerContainer .center .buttons {
+.Home .heroContainer .centerContainer .buttons {
     width: 100%;
     text-align: center;
 }
-.Home .centerContainer .center .buttons .button {
+.Home .heroContainer .centerContainer .buttons .button {
     display: inline-block;
     width: 150px;
     margin: 0px 10px;
@@ -71,9 +59,14 @@ $min-height: 500px;
     color: white;
     cursor: pointer;
 }
-.Home .centerContainer .center .buttons .button:hover {
+.Home .heroContainer .centerContainer .buttons .button:hover {
     color: black;
     background: white;
+}
+@media only screen and (max-width: 680px) {
+    .Home .heroContainer .centerContainer .text {
+        font-size: 40px;
+    }
 }
 
 $forground: white;

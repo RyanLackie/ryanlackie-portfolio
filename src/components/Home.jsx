@@ -23,17 +23,10 @@ export default class Home extends Component {
         return (
             <div className="Home" id='Home'>
 
-                <div className="landing"></div>
-
                 <div className="heroContainer">
                     <div className="hero" id='hero'></div>
-                </div>
-
-                <div className="centerContainer">
-
-                    <div className='centerer'></div>
             
-                    <div className="center">
+                    <div className="centerContainer">
 
                         <div className="text">
                             <b>Ryan Lackie</b>

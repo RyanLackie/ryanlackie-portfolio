@@ -30,6 +30,9 @@ export default class Portfolio extends Component {
         var win = window.open(url, '_blank');
         win.focus();
     }
+    alert = (message) => {
+        alert(message);
+    }
 
     render() {
         return (
@@ -71,7 +74,7 @@ export default class Portfolio extends Component {
                                 <div className='image' style={{backgroundImage: `url(${img2})`, backgroundPosition: 'top left'}}></div>
                                 <div className="overlay">
                                     <div className="buttonContainer">
-                                        <button className="linkBtn" onClick={this.openLink.bind(this, "")}>See Live</button>
+                                        <button className="linkBtn" onClick={this.alert.bind(this, "Comming Soon")}>See Live</button>
                                         <button className="linkBtn" onClick={this.openLink.bind(this, "https://github.com/RyanLackie/WebProgramming-FinalProject")}>See Code</button>
                                     </div>
                                 </div>
