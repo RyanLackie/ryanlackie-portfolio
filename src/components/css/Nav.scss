@@ -56,6 +56,7 @@
     right: 3%;
     width: 35px;
     height: 35px;
+    z-index: 5;
 }
 .Nav .responsiveMenu .menu-button .bar1, .bar2, .bar3 {
     width: 35px;
@@ -75,7 +76,7 @@
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
 }
-
+/*
 .Nav .responsiveMenu .button {
     display: none;
     vertical-align: middle;
@@ -86,20 +87,68 @@
     color: white;
     text-align: center;
 }
-/*
+*/
+$reactiveButtonHeight: 40px;
 .Nav .responsiveMenu .button {
-    display: fixed;
+    position: absolute;
     vertical-align: middle;
     width: 100%;
-    height: 60px;
+    height: $reactiveButtonHeight;
     top: -60px;
     cursor: pointer;
     background: black;
     color: white;
     text-align: center;
-    transition: top 0.5s;
 }
-*/
+.Nav .responsiveMenu .openSkillsBtn {
+    top: $reactiveButtonHeight*0;
+    transition: top 0.3s;
+    transition-delay: 0.0s;
+    z-index: 4;
+}
+.Nav .responsiveMenu .openPortfolioBtn {
+    top: $reactiveButtonHeight*1;
+    transition: top 0.3s;
+    transition-delay: 0.1s;
+    z-index: 3;
+}
+.Nav .responsiveMenu .openAboutBtn {
+    top: $reactiveButtonHeight*2;
+    transition: top 0.3s;
+    transition-delay: 0.2s;
+    z-index: 2;
+}
+.Nav .responsiveMenu .openContactBtn {
+    top: $reactiveButtonHeight*3;
+    transition: top 0.3s;
+    transition-delay: 0.3s;
+    z-index: 1;
+}
+.Nav .responsiveMenu .closeSkillsBtn {
+    top: -$reactiveButtonHeight;
+    transition: top 0.3s;
+    transition-delay: 0.15s;
+    z-index: 4;
+}
+.Nav .responsiveMenu .closePortfolioBtn {
+    top: -$reactiveButtonHeight;
+    transition: top 0.3s;
+    transition-delay: 0.1s;
+    z-index: 3;
+}
+.Nav .responsiveMenu .closeAboutBtn {
+    top: -$reactiveButtonHeight;
+    transition: top 0.3s;
+    transition-delay: 0.05s;
+    z-index: 2;
+}
+.Nav .responsiveMenu .closeContactBtn {
+    top: -$reactiveButtonHeight;
+    transition: top 0.3s;
+    transition-delay: 0.0s;
+    z-index: 1;
+}
+
 .Nav .responsiveMenu .button .button-text {
     display: inline-block;
     font-size: 15px;
