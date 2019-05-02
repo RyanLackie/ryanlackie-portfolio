@@ -9,6 +9,9 @@ import img4 from '../assets/cell.png';
 import img5 from '../assets/jailbird.png';
 import img6 from '../assets/snake.png';
 
+import jailbird from '../files/JailBird.jar';
+import snakegames from '../files/Snake Games.zip';
+
 export default class Portfolio extends Component {
     componentWillUpdate() {
         this.animationHandler();
@@ -33,7 +36,7 @@ export default class Portfolio extends Component {
     alert = (message) => {
         alert(message);
     }
-
+    
     render() {
         return (
             <div className="Portfolio section" id='Portfolio'>
@@ -132,7 +135,7 @@ export default class Portfolio extends Component {
                                 <div className='image' style={{backgroundImage: `url(${img5})`}}></div>
                                 <div className="overlay">
                                     <div className="buttonContainer">
-                                        <a href="../files/JailBird.jar" download>
+                                        <a href={jailbird} download='JailBird.jar'>
                                             <button className="linkBtn">Download</button>
                                         </a>
                                         <button className="linkBtn" onClick={this.openLink.bind(this, "https://github.com/RyanLackie/JailBird")}>See Code</button>
@@ -154,7 +157,7 @@ export default class Portfolio extends Component {
                                 <div className='image' style={{backgroundImage: `url(${img6})`, backgroundSize: '105%', backgroundPosition: 'center'}}></div>
                                 <div className="overlay">
                                     <div className="buttonContainer">
-                                        <a href='../files/Snake Games.zip' download>
+                                        <a href={snakegames} download='Snake Games.zip'>
                                             <button className="linkBtn">Download</button>
                                         </a>
                                         <button className="linkBtn" onClick={this.openLink.bind(this, "https://github.com/RyanLackie/SnakeGame")}>See Code</button>

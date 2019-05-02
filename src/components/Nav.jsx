@@ -3,19 +3,16 @@ import React, { Component } from 'react';
 import './css/Nav.scss';
 
 export default class Nav extends Component {
+    componentDidMount() {
+        document.getElementById('buttonGroup').classList.add('slideInRight');
+    }
     componentWillUpdate() {
         this.styleNav();
     }
 
-    animate = false;
     reactiveWindowSize = 680;
+    previousScroll = null;
     styleNav() {
-        //Nav Animation
-        if (!this.animate) {
-            document.getElementById('buttonGroup').classList.add('slideInRight');
-            this.animate = true;
-        }
-
         //Nav Sizing
         if (window.innerWidth > this.reactiveWindowSize) {  //Normal Menu
             if (window.scrollY >= 50) {
@@ -28,14 +25,21 @@ export default class Nav extends Component {
             }
         }
         else {  //Reactive Menu
-            if (window.scrollY >= 50) {
+            if (window.scrollY < 50) {
+                document.getElementById('Nav').style.top = '0px';
+                document.getElementById('Nav').style.height = '60px';
+                document.getElementById('Nav').style.background = 'transparent';
+            }
+            else if ((window.scrollY >= 50 && window.scrollY < 150) || (this.previousScroll != null && this.previousScroll > window.scrollY)) {
+                document.getElementById('Nav').style.top = '0px';
                 document.getElementById('Nav').style.height = '40px';
                 document.getElementById('Nav').style.background = 'black';
             }
             else {
-                document.getElementById('Nav').style.height = '60px';
-                document.getElementById('Nav').style.background = 'transparent';
+                document.getElementById('Nav').style.top = '-40px';
+                document.getElementById('Nav').style.height = '40px';
             }
+            this.previousScroll = window.scrollY;
         }
 
         //Nav Highlighting

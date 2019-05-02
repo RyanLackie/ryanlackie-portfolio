@@ -1,8 +1,8 @@
 //Local Production
-const api_root = "http://localhost:81";
+//const api_root = "http://localhost:81";
 
 //Server Deployment
-//const api_root = "http://206.189.167.65:81";
+const api_root = "http://206.189.167.65:81";
 
 
 export function sendMessage(name, email, phoneNumber, message) {

@@ -105,7 +105,7 @@ export default class Skills extends Component {
                                 Database Design & Development
                             </div>
                             <div className="footer">
-                                Database architectures in MySQL or Parse Server, always aiming for performance, scale and stability.
+                                Database architectures in MySQL, always aiming for performance, scale and stability.
                             </div>
                         </div>
 
