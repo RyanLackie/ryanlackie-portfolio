@@ -3,6 +3,18 @@ import React, { Component } from 'react';
 import './css/Nav.scss';
 
 export default class Nav extends Component {
+    constructor() {
+        super();
+        this.state = {
+            reactiveWindowSize: 680,
+            previousScroll: null,
+            menuOpen: false
+        }
+        this.menuButtonClicked = this.menuButtonClicked.bind(this);
+        this.openMenu = this.openMenu.bind(this);
+        this.closeMenu = this.closeMenu.bind(this);
+    }
+
     componentDidMount() {
         document.getElementById('buttonGroup').classList.add('slideInRight');
     }
@@ -25,28 +37,32 @@ export default class Nav extends Component {
             }
         }
         else {  //Reactive Menu
+            //Top of page
             if (window.scrollY < 50) {
                 document.getElementById('Nav').style.top = '0px';
                 document.getElementById('Nav').style.height = '60px';
                 document.getElementById('Nav').style.background = 'transparent';
             }
-            else if ((window.scrollY >= 50 && window.scrollY < 150) || (this.previousScroll != null && this.previousScroll > window.scrollY)) {
+            //Show menu below top of page
+            else if ((window.scrollY >= 50 && window.scrollY < 250) || (this.previousScroll != null && this.previousScroll > window.scrollY)) {
                 document.getElementById('Nav').style.top = '0px';
                 document.getElementById('Nav').style.height = '40px';
                 document.getElementById('Nav').style.background = 'black';
             }
+            //Hide menu
             else {
+                this.closeMenu();
                 document.getElementById('Nav').style.top = '-40px';
                 document.getElementById('Nav').style.height = '40px';
             }
-            this.previousScroll = window.scrollY;
+            this.previousScroll = window.scrollY
         }
 
         //Nav Highlighting
         if (this.props.skillsLocation === null || this.props.portfolioLocation == null || this.props.aboutLocation === null || this.props.contactLocation === null)
             this.forceUpdate();
 
-        else if (window.innerWidth > this.reactiveWindowSize) {    //Normal Menu
+        else if (window.innerWidth > this.state.reactiveWindowSize) {    //Normal Menu
             if (this.props.skillsLocation.top <= window.innerHeight/2 && this.props.skillsLocation.bottom >= window.innerHeight/2)
                 document.getElementById('skillsBtn').classList.add('activeBtn');
             else
@@ -91,37 +107,45 @@ export default class Nav extends Component {
         }
     }
 
-    menuButtonClicked() {
-        document.getElementById('bar1').classList.toggle('closeBar1');
-        document.getElementById('bar2').classList.toggle('closeBar2');
-        document.getElementById('bar3').classList.toggle('closeBar3');
+    menuButtonClicked = () => {
+        if (document.getElementById('reactiveSkillsBtn').classList.contains('closeSkillsBtn'))
+            this.openMenu();
+        else
+            this.closeMenu();
+    }
+    openMenu = () => {
+        document.getElementById('bar1').classList.add('closeBar1');
+        document.getElementById('bar2').classList.add('closeBar2');
+        document.getElementById('bar3').classList.add('closeBar3');
 
-        if (document.getElementById('bar3').classList.contains('closeBar3')) {
-            document.getElementById('reactiveSkillsBtn').classList.remove('closeSkillsBtn');
-            document.getElementById('reactiveSkillsBtn').classList.add('openSkillsBtn');
+        document.getElementById('reactiveSkillsBtn').classList.remove('closeSkillsBtn');
+        document.getElementById('reactiveSkillsBtn').classList.add('openSkillsBtn');
 
-            document.getElementById('reactivePortfolioBtn').classList.remove('closePortfolioBtn');
-            document.getElementById('reactivePortfolioBtn').classList.add('openPortfolioBtn');
+        document.getElementById('reactivePortfolioBtn').classList.remove('closePortfolioBtn');
+        document.getElementById('reactivePortfolioBtn').classList.add('openPortfolioBtn');
 
-            document.getElementById('reactiveAboutBtn').classList.remove('closeAboutBtn');
-            document.getElementById('reactiveAboutBtn').classList.add('openAboutBtn');
+        document.getElementById('reactiveAboutBtn').classList.remove('closeAboutBtn');
+        document.getElementById('reactiveAboutBtn').classList.add('openAboutBtn');
 
-            document.getElementById('reactiveContactBtn').classList.remove('closeContactBtn');
-            document.getElementById('reactiveContactBtn').classList.add('openContactBtn');
-        }
-        else {
-            document.getElementById('reactiveSkillsBtn').classList.remove('openSkillsBtn');
-            document.getElementById('reactiveSkillsBtn').classList.add('closeSkillsBtn');
-            
-            document.getElementById('reactivePortfolioBtn').classList.remove('openPortfolioBtn');
-            document.getElementById('reactivePortfolioBtn').classList.add('closePortfolioBtn');
+        document.getElementById('reactiveContactBtn').classList.remove('closeContactBtn');
+        document.getElementById('reactiveContactBtn').classList.add('openContactBtn');
+    }
+    closeMenu = () => {
+        document.getElementById('bar1').classList.remove('closeBar1');
+        document.getElementById('bar2').classList.remove('closeBar2');
+        document.getElementById('bar3').classList.remove('closeBar3');
 
-            document.getElementById('reactiveAboutBtn').classList.remove('openAboutBtn');
-            document.getElementById('reactiveAboutBtn').classList.add('closeAboutBtn');
+        document.getElementById('reactiveSkillsBtn').classList.remove('openSkillsBtn');
+        document.getElementById('reactiveSkillsBtn').classList.add('closeSkillsBtn');
+        
+        document.getElementById('reactivePortfolioBtn').classList.remove('openPortfolioBtn');
+        document.getElementById('reactivePortfolioBtn').classList.add('closePortfolioBtn');
 
-            document.getElementById('reactiveContactBtn').classList.remove('openContactBtn');
-            document.getElementById('reactiveContactBtn').classList.add('closeContactBtn');
-        }
+        document.getElementById('reactiveAboutBtn').classList.remove('openAboutBtn');
+        document.getElementById('reactiveAboutBtn').classList.add('closeAboutBtn');
+
+        document.getElementById('reactiveContactBtn').classList.remove('openContactBtn');
+        document.getElementById('reactiveContactBtn').classList.add('closeContactBtn');
     }
 
     handleButtonClick(location) {
@@ -170,22 +194,22 @@ export default class Nav extends Component {
                         <div className="bar3" id='bar3'></div>
                     </div>
                 
-                    <div className="button unactiveBtn skillsBtn" id='reactiveSkillsBtn' onClick={this.handleButtonClick.bind(this, this.props.skillsLocation)}>
+                    <div className="button unactiveBtn skillsBtn closeSkillsBtn" id='reactiveSkillsBtn' onClick={this.handleButtonClick.bind(this, this.props.skillsLocation)}>
                         <div className="centerer"></div>
                         <div className="button-text">SKILLS</div>
                     </div>
 
-                    <div className="button unactiveBtn portfolioBtn" id='reactivePortfolioBtn' onClick={this.handleButtonClick.bind(this, this.props.portfolioLocation)}>
+                    <div className="button unactiveBtn portfolioBtn closePortfolioBtn" id='reactivePortfolioBtn' onClick={this.handleButtonClick.bind(this, this.props.portfolioLocation)}>
                         <div className="centerer"></div>
                         <div className="button-text">PORTOLIO</div>
                     </div>
 
-                    <div className="button unactiveBtn aboutBtn" id='reactiveAboutBtn' onClick={this.handleButtonClick.bind(this, this.props.aboutLocation)}>
+                    <div className="button unactiveBtn aboutBtn closeAboutBtn" id='reactiveAboutBtn' onClick={this.handleButtonClick.bind(this, this.props.aboutLocation)}>
                         <div className="centerer"></div>
                         <div className="button-text">ABOUT</div>
                     </div>
 
-                    <div className="button unactiveBtn contactBtn" id='reactiveContactBtn' onClick={this.handleButtonClick.bind(this, this.props.contactLocation)}>
+                    <div className="button unactiveBtn contactBtn closeContactBtn" id='reactiveContactBtn' onClick={this.handleButtonClick.bind(this, this.props.contactLocation)}>
                         <div className="centerer"></div>
                         <div className="button-text">CONTACT</div>
                     </div>
