@@ -78,7 +78,7 @@ export default class Portfolio extends Component {
                                 <div className="overlay">
                                     <div className="buttonContainer">
                                         <button className="linkBtn" onClick={this.alert.bind(this, "Comming Soon")}>See Live</button>
-                                        <button className="linkBtn" onClick={this.openLink.bind(this, "https://github.com/RyanLackie/WebProgramming-FinalProject")}>See Code</button>
+                                        <button className="linkBtn" onClick={this.openLink.bind(this, "https://github.com/RyanLackie/TrakNutritionTracker")}>See Code</button>
                                     </div>
                                 </div>
                             </div>
