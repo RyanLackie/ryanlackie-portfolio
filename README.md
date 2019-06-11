@@ -6,14 +6,13 @@ This is my web based portfolio describing what I can do along with projects I ha
 
 ## Tech ##
 
-The applicationuses HTML, CSS, JavaScript, Vue.js, Express.js, Node.js, and MySQL. 
-
+Application: 
 - HTML – Used to structure the web pages.
 -	CSS/SCSS – Used to style the HTML.
 -	JavaScript – Used to make the pages interactive.
 -	React – Used to structure the JavaScript.
--	Express.js – A JavaScript backend framework to run on a server that accepts requests and responds back to allow the API to interact with the server to interact with the database.
--	Node.js – A runtime to run the Express.js framework inside of.
+-	Express – A JavaScript backend framework to run on a server that accepts requests and responds back to allow the API to interact with the server to interact with the database.
+-	Node – A runtime to run the Express.js framework inside of.
 
 Cloud Server:
 -	Linux – Operating system to manage the hardware and to run the other software.
