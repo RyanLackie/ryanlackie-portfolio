@@ -57,7 +57,7 @@ export default class Portfolio extends Component {
                                 <div className='image' style={{backgroundImage: `url(${img1})`, backgroundPosition: 'top center'}}></div>
                                 <div className="overlay">
                                     <div className="buttonContainer">
-                                        <button className="linkBtn" onClick={this.openLink.bind(this, "http://134.209.119.199")}>See Live</button>
+                                        <button className="linkBtn" onClick={this.openLink.bind(this, "http://159.89.238.244")}>See Live</button>
                                         <button className="linkBtn" onClick={this.openLink.bind(this, "https://github.com/RyanLackie/OneEpicPlace-WebsiteSchedulingExtension")}>See Code</button>
                                     </div>
                                 </div>
@@ -67,7 +67,7 @@ export default class Portfolio extends Component {
                                     OEP Room Rental
                                 </div>
                                 <div className="about">
-                                    HTML, CSS, JavaScript, Vue.js, Express.js, Node.js, MySQL
+                                    HTML, CSS/SCSS, SASS, JavaScript, Vue, Express, Node, MySQL
                                 </div>
                             </div>
                         </div>
@@ -87,7 +87,7 @@ export default class Portfolio extends Component {
                                     Trak Nutition Tracker
                                 </div>
                                 <div className="about">
-                                    HTML, CSS, JavaScript, Vue.js, Express.js, Node.js, MySQL
+                                    HTML, CSS/SCSS, JavaScript, Vue, Express, Node, MySQL
                                 </div>
                             </div>
                         </div>
@@ -103,10 +103,10 @@ export default class Portfolio extends Component {
                             </div>
                             <div className="footer">
                                 <div className="title">
-                                    Android - Turn Game
+                                    Adventure Android Game
                                 </div>
                                 <div className="about">
-                                    Java, XML, Gradle, LibGDX
+                                    Java, XML, Android Gradle, Libgdx
                                 </div>
                             </div>
                         </div>
@@ -122,10 +122,10 @@ export default class Portfolio extends Component {
                             </div>
                             <div className="footer">
                                 <div className="title">
-                                    Android - Cell Game
+                                    AI Observer Android Game
                                 </div>
                                 <div className="about">
-                                    Java, XML, Gradle, LibGDX
+                                    Java, XML, Android Gradle, Libgdx
                                 </div>
                             </div>
                         </div>

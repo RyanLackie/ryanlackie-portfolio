@@ -63,13 +63,14 @@ export default class About extends Component {
                     <div className="text animated" id='text2'>
                         I have a strong passion for creation and have been thrilled ever since I started my career in Software Development.
                         I pride myself on having a strong work ethic and always have an eagerness to learn more. 
-                        While working with a startup I have had experience many different aspects in the development 
-                        life cycle and have worn a lot of hats from Front-end, Back-end, to Dev-ops.
+                        While working with a startup I have had experience many different aspects in the production 
+                        life cycle and I have worn a lot of hats from client side and server side development, to cloud server creation and integration.
                     </div>
 
                     <div className="text animated" id='text3'>
-                        I have 2+ years of development experience building Full-stack products from the ground up, 
-                        developing and integrating APIs, and working with databases and cloud platforms.
+                        I have 2+ years of development experience with 1 that I spent developing for the company 
+                        "One EPIC Place". I am proficient in building products from the ground up, the creation and 
+                        interaction of REST API's, and working with databases and cloud platforms.
                     </div>
 
                 </div>

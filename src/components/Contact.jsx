@@ -57,8 +57,7 @@ export default class Contact extends Component {
                 </div>
 
                 <div className="message">
-                    Want to talk? <br/>
-                    I'm always up to get a cup of coffee.
+                    Want to talk?
                 </div>
 
                 <form id="messageForm">
