@@ -31,13 +31,18 @@ export default class Home extends Component {
                         <div className="text">
                             <b>Ryan Lackie</b>
                             <br/>
-                            <b>Full-Stack Developer</b>
+                            <b>Software Engineer</b>
                         </div>
 
                         <div className="buttons">
                             <div className="button" onClick={this.openLink.bind(this, "https://drive.google.com/open?id=13kX1LcacyBnpHS0BxnEq-Q4OqFdDYtzX")}>
                                 Resume
                             </div>
+                            <div className="button" onClick={this.openLink.bind(this, "https://github.com/RyanLackie/RyanLackie-Portfolio")}>
+                                See Code
+                            </div>
+                        </div>
+                        <div className="buttons">
                             <div className="button" onClick={this.scroll}>
                                 See More
                             </div>
