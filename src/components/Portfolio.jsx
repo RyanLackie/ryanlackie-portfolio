@@ -77,7 +77,7 @@ export default class Portfolio extends Component {
                                 <div className='image' style={{backgroundImage: `url(${img2})`, backgroundPosition: 'top left'}}></div>
                                 <div className="overlay">
                                     <div className="buttonContainer">
-                                        <button className="linkBtn" onClick={this.alert.bind(this, "Comming Soon")}>See Live</button>
+                                        <button className="linkBtn" onClick={this.alert.bind(this, "http://165.22.179.173")}>See Live</button>
                                         <button className="linkBtn" onClick={this.openLink.bind(this, "https://github.com/RyanLackie/TrakNutritionTracker")}>See Code</button>
                                     </div>
                                 </div>
