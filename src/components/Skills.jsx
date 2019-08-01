@@ -166,7 +166,7 @@ export default class Skills extends Component {
                             <div className="info row">
                                 <div className="item">OOCSS</div>
                                 <div className="item">DRY</div>
-                                <div className="item">Ajax</div>
+                                <div className="item">Babel</div>
                                 <div className="item">Webpack</div>
                                 <div className="item">Git</div>
                                 <div className="item">Photoshop</div>
@@ -203,7 +203,7 @@ export default class Skills extends Component {
                                 <div className="item">Express</div>
                                 <div className="item">Node</div>
                                 <div className="item">Spring Boot</div>
-                                <div className="item">.Net</div>
+                                <div className="item">Flask</div>
                             </div>
                         </div>
 
@@ -212,7 +212,7 @@ export default class Skills extends Component {
                             <div className="info row">                                
                                 <div className="item">npm</div>
                                 <div className="item">yarn</div>
-                                <div className="item">babel</div>
+                                <div className="item">Babel</div>
                                 <div className="item">JSON</div>
                                 <div className="item">REST API</div>
                                 <div className="item">Mocha</div>
