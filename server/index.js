@@ -21,7 +21,7 @@ app.use('/app', controller);
 
 // Server Stuff
 const server = 'localhost';
-const port = 8080;
+const port = process.env.PORT;
 
 // Port listen and message
 app.listen(port);
