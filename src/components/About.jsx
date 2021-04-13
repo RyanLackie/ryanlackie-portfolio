@@ -7,7 +7,7 @@ export default class About extends Component {
         this.animationHandler();
     }
     animationHandler() {
-        for (var icon = 1; icon <= 2; icon++) {
+        for (let icon = 1; icon <= 2; icon++) {
             if (this.props.willAnimate('icon' + icon)) {
                 document.getElementById('icon' + icon).style.visibility = 'visible';
                 document.getElementById('icon' + icon).classList.add('rollIn');
@@ -18,7 +18,7 @@ export default class About extends Component {
             }
         }
 
-        for (var text = 1; text <= 3; text++) {
+        for (let text = 1; text <= 3; text++) {
             if (this.props.willAnimate('text' + text)) {
                 document.getElementById('text' + text).style.visibility = 'visible';
                 document.getElementById('text' + text).classList.add('fadeInUp');
@@ -31,7 +31,7 @@ export default class About extends Component {
     }
 
     openLink = (url) => {
-        var win = window.open(url, '_blank');
+        let win = window.open(url, '_blank');
         win.focus();
     }
 
@@ -55,24 +55,17 @@ export default class About extends Component {
                 </div>
 
                 <div className="container-fluid">
-
                     <div className="text animated" id='text1'>
-                        Hi, my name is Ryan Lackie and I am a full stack developer.<br/>
+                        Hi, my name is Ryan Lackie and I am a Full Stack Software Engineer.
                     </div>
 
                     <div className="text animated" id='text2'>
-                        I have a strong passion for creation and have been thrilled ever since I started my career in Software Development.
-                        I pride myself on having a strong work ethic and always have an eagerness to learn more. 
-                        While working with a startup I have had experience many different aspects in the production 
-                        life cycle and I have worn a lot of hats from client side and server side development, to cloud server creation and integration.
+                        I am a results-oriented problem solver with attention to detail focused on the end user’s experience. I have a background in fast paced ever-changing startups where both independently and with a team I have created full-scale applications from the ground up.
                     </div>
 
                     <div className="text animated" id='text3'>
-                        I have 2+ years of development experience with 1 that I spent developing for the company 
-                        "One EPIC Place". I am proficient in building products from the ground up, the creation and 
-                        interaction of REST API's, and working with databases and cloud platforms.
+                        Aside from coding, I also love cooking and spending time out in nature during hikes.
                     </div>
-
                 </div>
 
             </div>

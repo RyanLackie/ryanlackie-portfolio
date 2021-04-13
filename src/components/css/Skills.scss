@@ -1,15 +1,17 @@
+$forground: indigo;
+$background: #f7f7f7;
+
 .Skills {
-    -webkit-touch-callout: none;    /* iOS Safari */
-    -webkit-user-select: none;      /* Safari */
-    -khtml-user-select: none;       /* Konqueror HTML */
-    -moz-user-select: none;         /* Firefox */
-    -ms-user-select: none;          /* Internet Explorer/Edge */
-    user-select: none;              /* Non-prefixed version, currently
-                                    supported by Chrome and Opera */
+    background: $background;
 }
+
 /*
     Skills Cards
 */
+.Skills .description-section {
+    margin-bottom: 50px;
+}
+
 .Skills .skillsCard {
     display: inline-block;
     width: 100%;
@@ -72,7 +74,7 @@
     border: 1px black solid;
     box-shadow:0 10px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     color: white;
-    background: indigo;
+    background: $forground;
     cursor: default;
     visibility: hidden;
 }

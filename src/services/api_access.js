@@ -1,8 +1,4 @@
-//Local Production
-//const api_root = "http://localhost:81";
-
-//Server Deployment
-const api_root = "http://206.189.189.220:81";
+const api_root = "http://localhost:8080";
 
 
 export function sendMessage(name, email, phoneNumber, message) {
@@ -12,25 +8,23 @@ export function sendMessage(name, email, phoneNumber, message) {
 }
 
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function myFetch(url = ``, data = null) {
     let options = {
-        cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-        credentials: "same-origin", // include, same-origin, *omit
+        cache: "no-cache",
+        credentials: "same-origin",
     };
-    if(data) {
-        options = { 
+    if (data) {
+        options = {
             ...options,
-            method:  "POST", // *GET, POST, PUT, DELETE, etc.
+            method:  "POST",
             headers: {
                 "Content-Type": "application/json; charset=utf-8",
-                // "Content-Type": "application/x-www-form-urlencoded",
             },
-            body: JSON.stringify(data), // body data type must match "Content-Type" header
+            body: JSON.stringify(data),
         };
     }
     return fetch(url, options)
     .then(response => {
-        return response.json()
-    }); // parses response to JSON
+        return response;
+    });
 }

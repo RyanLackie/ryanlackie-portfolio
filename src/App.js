@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Nav from "./components/Nav";
 import Home from "./components/Home";
 import Skills from "./components/Skills";
-import Portfolio from "./components/Portfolio";
+import Projects from "./components/Projects";
 import About from "./components/About";
 import Contact from "./components/Contact";
 
@@ -14,7 +14,7 @@ class App extends Component {
     state = {
         topLocation: null,
         skillsLocation: null,
-        portfolioLocation: null,
+        projectsLocation: null,
         aboutLocation: null,
         contactLocation: null
     };
@@ -33,7 +33,7 @@ class App extends Component {
         this.setState({
             topLocation: document.getElementById('Home').getBoundingClientRect(),
             skillsLocation: document.getElementById('Skills').getBoundingClientRect(),
-            portfolioLocation: document.getElementById('Portfolio').getBoundingClientRect(),
+            projectsLocation: document.getElementById('Projects').getBoundingClientRect(),
             aboutLocation: document.getElementById('About').getBoundingClientRect(),
             contactLocation: document.getElementById('Contact').getBoundingClientRect()
         });
@@ -41,24 +41,24 @@ class App extends Component {
 
     //Shaired Functions
     willAnimate(id) {
-        var topOffSet = window.innerHeight*0.15;
-        var topOfScreen = window.scrollY + topOffSet;
-        var botOfScreen = topOfScreen + window.innerHeight - topOffSet*1.5;
+        let topOffSet = window.innerHeight*0.15;
+        let topOfScreen = window.scrollY + topOffSet;
+        let botOfScreen = topOfScreen + window.innerHeight - topOffSet*1.5;
 
-        var topOfElement = document.getElementById(id).getBoundingClientRect().top + window.scrollY;
-        var botOfElement = document.getElementById(id).getBoundingClientRect().bottom + window.scrollY;
+        let topOfElement = document.getElementById(id).getBoundingClientRect().top + window.scrollY;
+        let botOfElement = document.getElementById(id).getBoundingClientRect().bottom + window.scrollY;
 
         if ((botOfElement >= topOfScreen) && (topOfElement <= botOfScreen))
             return true;
         return false;
     }
     inFrame(id) {
-        var topOffSet = 60;
-        var topOfScreen = window.scrollY + topOffSet;
-        var botOfScreen = topOfScreen + window.innerHeight - topOffSet;
-        
-        var topOfElement = document.getElementById(id).getBoundingClientRect().top + window.scrollY;
-        var botOfElement = document.getElementById(id).getBoundingClientRect().bottom + window.scrollY;
+        let topOffSet = 60;
+        let topOfScreen = window.scrollY + topOffSet;
+        let botOfScreen = topOfScreen + window.innerHeight - topOffSet;
+
+        let topOfElement = document.getElementById(id).getBoundingClientRect().top + window.scrollY;
+        let botOfElement = document.getElementById(id).getBoundingClientRect().bottom + window.scrollY;
 
         if ((botOfElement >= topOfScreen) && (topOfElement <= botOfScreen))
             return true;
@@ -68,18 +68,18 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-            
+
                 <Nav
                     topLocation={this.state.topLocation}
                     skillsLocation={this.state.skillsLocation}
-                    portfolioLocation={this.state.portfolioLocation}
+                    projectsLocation={this.state.projectsLocation}
                     aboutLocation={this.state.aboutLocation}
                     contactLocation={this.state.contactLocation}
                 />
                 <Home/>
-                <Skills willAnimate={this.willAnimate} inFrame={this.inFrame}/>
-                <Portfolio willAnimate={this.willAnimate} inFrame={this.inFrame}/>
                 <About willAnimate={this.willAnimate} inFrame={this.inFrame}/>
+                <Skills willAnimate={this.willAnimate} inFrame={this.inFrame}/>
+                <Projects willAnimate={this.willAnimate} inFrame={this.inFrame}/>
                 <Contact willAnimate={this.willAnimate} inFrame={this.inFrame}/>
 
             </div>

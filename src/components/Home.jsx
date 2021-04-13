@@ -8,7 +8,7 @@ export default class Home extends Component {
     }
 
     openLink = (url) => {
-        var win = window.open(url, '_blank');
+        let win = window.open(url, '_blank');
         win.focus();
     }
 
@@ -25,7 +25,7 @@ export default class Home extends Component {
 
                 <div className="heroContainer">
                     <div className="hero" id='hero'></div>
-            
+
                     <div className="centerContainer">
 
                         <div className="text">
@@ -39,15 +39,15 @@ export default class Home extends Component {
                                 Resume
                             </div>
                             <div className="button" onClick={this.openLink.bind(this, "https://github.com/RyanLackie/RyanLackie-Portfolio")}>
-                                See Code
+                                Code
                             </div>
                         </div>
-                        <div className="buttons">
-                            <div className="button" onClick={this.scroll}>
-                                See More
-                            </div>
-                        </div>
+                    </div>
 
+                    <div className="see-more-button-container animated fadeInLeft">
+                        <div className="button" onClick={this.scroll}>
+                            See More
+                        </div>
                     </div>
 
                     <div className="icons">
