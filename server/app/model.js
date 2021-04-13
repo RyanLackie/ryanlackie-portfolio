@@ -1,35 +1,31 @@
-var nodemailer = require('nodemailer');
+let nodemailer = require('nodemailer');
 
 class Model {
 
     sendMessage(name, email, phoneNumber, message, call_back) {
-        var transporter = nodemailer.createTransport({
+        let transporter = nodemailer.createTransport({
             service: 'gmail',
                 auth: {
-                    user: 'RyanLackiePortfolio@gmail.com',
-                    pass: 'StabConn433Auth!'
+                    user: process.env.EMAIL,
+                    pass: process.env.EMAIL_PASSWORD
                 }
         });
-    
-        var mailOptions = {
+
+        let mailOptions = {
             from: 'RyanLackiePortfolio@gmail.com',
             to: 'ryanwlackie@gmail.com',
             subject: 'Sent from Portfolio Website',
             text: name + ': ' + email + ': ' + phoneNumber + '\n' + message
         };
-        
-        transporter.sendMail(mailOptions, function(error, info) {
+        call_back({ 'data': 'success', 'status': 200 });
+        transporter.sendMail(mailOptions, (error, info) => {
             if (error) {
-                console.log(error);
-                call_back('404');
+                return call_back({ 'data': error.response, 'status': error.responseCode });
             }
-            else {
-                console.log('Email sent: ' + info.response);
-                call_back('100');
-            }
+            return call_back({ 'data': 'success', 'status': 200 });
         });
     }
-    
+
 }
 
 module.exports = Model;

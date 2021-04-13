@@ -1,17 +1,11 @@
+$reactiveButtonHeight: 40px;
+
 .Nav {
     position: fixed;
     width: 100%;
     height: 80px;
     transition: 0.2s;
     z-index: 5;
-
-    -webkit-touch-callout: none;    /* iOS Safari */
-    -webkit-user-select: none;      /* Safari */
-    -khtml-user-select: none;       /* Konqueror HTML */
-    -moz-user-select: none;         /* Firefox */
-    -ms-user-select: none;          /* Internet Explorer/Edge */
-    user-select: none;              /* Non-prefixed version, currently
-                                    supported by Chrome and Opera */
 }
 .Nav .centerer {
     display: inline-block;
@@ -38,16 +32,17 @@
     font-size: 15px;
     font-family: 'Quicksand', sans-serif;
     letter-spacing: 3px;
+    font-weight: 800;
 }
 .Nav .buttonGroup .button:hover {
     color: gold;
 }
 .Nav .buttonGroup .activeBtn {
-    color: white;
+    color: black;
     background: gold;
 }
 .Nav .buttonGroup .activeBtn:hover {
-    color: white;
+    color: black;
 }
 
 
@@ -79,13 +74,12 @@
 }
 .Nav .responsiveMenu .menu-button .closeBar2 {
     opacity: 0;
-}  
+}
 .Nav .responsiveMenu .menu-button .closeBar3 {
     -webkit-transform: rotate(45deg) translate(-6px, -4px);
     transform: rotate(45deg) translate(-6px, -4px);
 }
 
-$reactiveButtonHeight: 40px;
 .Nav .responsiveMenu .button {
     position: absolute;
     vertical-align: middle;
@@ -97,52 +91,47 @@ $reactiveButtonHeight: 40px;
     color: white;
     text-align: center;
 }
-.Nav .responsiveMenu .openSkillsBtn {
+.Nav .responsiveMenu .openAboutBtn {
     top: $reactiveButtonHeight*0;
     transition: top 0.3s;
-    transition-delay: 0.0s;
     z-index: 4;
-}
-.Nav .responsiveMenu .openPortfolioBtn {
-    top: $reactiveButtonHeight*1;
-    transition: top 0.3s;
-    transition-delay: 0.1s;
-    z-index: 3;
-}
-.Nav .responsiveMenu .openAboutBtn {
-    top: $reactiveButtonHeight*2;
-    transition: top 0.3s;
-    transition-delay: 0.2s;
-    z-index: 2;
-}
-.Nav .responsiveMenu .openContactBtn {
-    top: $reactiveButtonHeight*3;
-    transition: top 0.3s;
-    transition-delay: 0.3s;
-    z-index: 1;
-}
-.Nav .responsiveMenu .closeSkillsBtn {
-    top: -$reactiveButtonHeight;
-    transition: top 0.3s;
-    transition-delay: 0.15s;
-    z-index: 4;
-}
-.Nav .responsiveMenu .closePortfolioBtn {
-    top: -$reactiveButtonHeight;
-    transition: top 0.3s;
-    transition-delay: 0.1s;
-    z-index: 3;
 }
 .Nav .responsiveMenu .closeAboutBtn {
     top: -$reactiveButtonHeight;
-    transition: top 0.3s;
-    transition-delay: 0.05s;
+    transition: top 0.6s;
+    z-index: 4;
+}
+
+.Nav .responsiveMenu .openSkillsBtn {
+    top: $reactiveButtonHeight*1;
+    transition: top 0.4s;
+    z-index: 3;
+}
+.Nav .responsiveMenu .closeSkillsBtn {
+    top: -$reactiveButtonHeight;
+    transition: top 0.5s;
+    z-index: 3;
+}
+
+.Nav .responsiveMenu .openProjectsBtn {
+    top: $reactiveButtonHeight*2;
+    transition: top 0.5s;
     z-index: 2;
+}
+.Nav .responsiveMenu .closeProjectsBtn {
+    top: -$reactiveButtonHeight;
+    transition: top 0.4s;
+    z-index: 2;
+}
+
+.Nav .responsiveMenu .openContactBtn {
+    top: $reactiveButtonHeight*3;
+    transition: top 0.6s;
+    z-index: 1;
 }
 .Nav .responsiveMenu .closeContactBtn {
     top: -$reactiveButtonHeight;
     transition: top 0.3s;
-    transition-delay: 0.0s;
     z-index: 1;
 }
 
@@ -156,7 +145,7 @@ $reactiveButtonHeight: 40px;
     color: gold;
 }
 .Nav .responsiveMenu .activeBtn {
-    color: white;
+    color: black;
     background: gold;
 }
 .Nav .responsiveMenu .activeBtn:hover {
