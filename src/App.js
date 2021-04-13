@@ -32,9 +32,9 @@ class App extends Component {
     update = () => {
         this.setState({
             topLocation: document.getElementById('Home').getBoundingClientRect(),
+            aboutLocation: document.getElementById('About').getBoundingClientRect(),
             skillsLocation: document.getElementById('Skills').getBoundingClientRect(),
             projectsLocation: document.getElementById('Projects').getBoundingClientRect(),
-            aboutLocation: document.getElementById('About').getBoundingClientRect(),
             contactLocation: document.getElementById('Contact').getBoundingClientRect()
         });
     }
@@ -48,8 +48,9 @@ class App extends Component {
         let topOfElement = document.getElementById(id).getBoundingClientRect().top + window.scrollY;
         let botOfElement = document.getElementById(id).getBoundingClientRect().bottom + window.scrollY;
 
-        if ((botOfElement >= topOfScreen) && (topOfElement <= botOfScreen))
+        if ((botOfElement >= topOfScreen) && (topOfElement <= botOfScreen)) {
             return true;
+        }
         return false;
     }
     inFrame(id) {
@@ -60,8 +61,9 @@ class App extends Component {
         let topOfElement = document.getElementById(id).getBoundingClientRect().top + window.scrollY;
         let botOfElement = document.getElementById(id).getBoundingClientRect().bottom + window.scrollY;
 
-        if ((botOfElement >= topOfScreen) && (topOfElement <= botOfScreen))
+        if ((botOfElement >= topOfScreen) && (topOfElement <= botOfScreen)) {
             return true;
+        }
         return false;
     }
 
@@ -71,9 +73,9 @@ class App extends Component {
 
                 <Nav
                     topLocation={this.state.topLocation}
+                    aboutLocation={this.state.aboutLocation}
                     skillsLocation={this.state.skillsLocation}
                     projectsLocation={this.state.projectsLocation}
-                    aboutLocation={this.state.aboutLocation}
                     contactLocation={this.state.contactLocation}
                 />
                 <Home/>
