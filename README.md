@@ -1,20 +1,8 @@
 # Ryan Lackie Portfolio
 
+## Hello ##
+
+Hi, if you got here from my portfolio I hope you like it! If you haven't seen it you can check it out here - https://ryan-lackie-portfolio.herokuapp.com/
+
 ## About ##
-
-This is my web based portfolio describing what I can do along with projects I have created in the past.
-
-## Tech ##
-
-Application: 
-- HTML – Used to structure the web pages.
--	CSS/SCSS – Used to style the HTML.
--	JavaScript – Used to make the pages interactive.
--	React – Used to structure the JavaScript.
--	Express – A JavaScript backend framework to run on a server that accepts requests and responds back to allow the API to interact with the server to interact with the database.
--	Node – A runtime to run the Express.js framework inside of.
-
-Cloud Server:
--	Linux – Operating system to manage the hardware and to run the other software.
--	Nginx – A web server that is run to host the application.
--	PHP – A general purpose programming language installed to allow installed software to compile.
+This app was made to hold my personal projects and link to my accounts to let you know what I’ve worked on. Feel free to take a look at any of the code or to reach out to talk. You can reach me by sending me a message through the portfolio form or by emailing me directly at RyanWLackie@gmail.com 🙂
