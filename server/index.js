@@ -3,6 +3,12 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 
+console.log(
+    process.env.EMAIL,
+    process.env.EMAIL_PASSWORD,
+    process.env.PORT,
+);
+
 // app.use settings
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
