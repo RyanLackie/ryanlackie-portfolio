@@ -37,5 +37,7 @@ function myFetch(url = ``, data = null) {
     return fetch(url, options)
     .then(response => {
         return response.json();
+    }).catch((err) => {
+        console.log(err);
     });
 }
