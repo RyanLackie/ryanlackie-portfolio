@@ -3,7 +3,8 @@ const stagingApiRoot = "http://ryanlackie-portfolio-api.herokuapp.com:80";
 const productionApiRoot = "test";
 
 let apiRoot = localApiRoot;
-if (process.env.NODE_ENV === 'production') {
+console.log(process.env.NODE_ENV);
+if (process.env.NODE_ENV === 'development') {
     apiRoot = window.location.hostname.includes('staging') ? stagingApiRoot : stagingApiRoot;
 }
 
