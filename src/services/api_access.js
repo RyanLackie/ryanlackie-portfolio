@@ -1,12 +1,15 @@
 const localApiRoot = "http://localhost:8080";
 const stagingApiRoot = "http://ryanlackie-portfolio-api.herokuapp.com:80";
-const productionApiRoot = "test";
+const productionApiRoot = stagingApiRoot;
 
-let apiRoot = localApiRoot;
+let apiRoot;
 console.log(process.env.NODE_ENV);
 if (process.env.NODE_ENV === 'development') {
     apiRoot = window.location.hostname.includes('staging') ? stagingApiRoot : stagingApiRoot;
+} else {
+    apiRoot = productionApiRoot;
 }
+console.log(apiRoot);
 
 
 export function sendMessage(name, email, phoneNumber, message) {
@@ -33,6 +36,6 @@ function myFetch(url = ``, data = null) {
     }
     return fetch(url, options)
     .then(response => {
-        return response;
+        return response.json();
     });
 }
