@@ -39,5 +39,6 @@ function myFetch(url = ``, data = null) {
         return response.json();
     }).catch((err) => {
         console.log(err);
+        return err;
     });
 }
