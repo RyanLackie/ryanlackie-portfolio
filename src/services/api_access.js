@@ -1,8 +1,15 @@
-const api_root = "http://localhost:8080";
+const localApiRoot = "http://localhost:8080";
+const stagingApiRoot = "http://ryanlackie-portfolio-api.herokuapp.com:80";
+const productionApiRoot = "test";
+
+let apiRoot = localApiRoot;
+if (process.env.NODE_ENV === 'production') {
+    apiRoot = window.location.hostname.includes('staging') ? stagingApiRoot : productionApiRoot;
+}
 
 
 export function sendMessage(name, email, phoneNumber, message) {
-    return myFetch(api_root + "/app/sendMessage", {
+    return myFetch(apiRoot + "/app/sendMessage", {
         name, email, phoneNumber, message
     });
 }
