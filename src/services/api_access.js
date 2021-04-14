@@ -4,7 +4,7 @@ const productionApiRoot = "test";
 
 let apiRoot = localApiRoot;
 if (process.env.NODE_ENV === 'production') {
-    apiRoot = window.location.hostname.includes('staging') ? stagingApiRoot : productionApiRoot;
+    apiRoot = window.location.hostname.includes('staging') ? stagingApiRoot : stagingApiRoot;
 }
 
 
