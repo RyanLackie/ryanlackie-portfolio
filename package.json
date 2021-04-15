@@ -9,7 +9,11 @@
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "^4.0.3"
+    "react-scripts": "^4.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemailer": "^6.5.0"
   },
   "scripts": {
     "serve": "react-scripts start",
@@ -18,7 +22,7 @@
     "eject": "react-scripts eject",
 
     "postinstall": "HEROKU_DEPLOY=true react-scripts build",
-    "start": ""
+    "start": "node server/index.js"
   },
   "eslintConfig": {
     "extends": "react-app"
