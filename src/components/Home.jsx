@@ -35,10 +35,10 @@ export default class Home extends Component {
                         </div>
 
                         <div className="buttons">
-                            <div className="button" onClick={this.openLink.bind(this, "https://drive.google.com/file/d/1nDQrORvtm3Afkih4QyvT4JU9dGEPo43q/view?usp=sharing")}>
+                            <div className="button" onClick={this.openLink.bind(this, "https://drive.google.com/file/d/1hz9t3BVqnbvSW_NFakhPS9d6EeMF7OMC/view?usp=sharing")}>
                                 Résumé
                             </div>
-                            <div className="button" onClick={this.openLink.bind(this, "https://github.com/RyanLackie/RyanLackie-Portfolio")}>
+                            <div className="button" onClick={this.openLink.bind(this, "https://github.com/RyanLackie/ryanlackie-portfolio")}>
                                 Code
                             </div>
                         </div>
