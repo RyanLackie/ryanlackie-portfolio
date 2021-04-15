@@ -1,11 +1,11 @@
 const localApiRoot = "http://localhost:8080";
-const stagingApiRoot = "http://ryanlackie-portfolio-api.herokuapp.com:80";
-const productionApiRoot = stagingApiRoot;
+const stagingApiRoot = "http://ryanlackie-port-api-staging.herokuapp.com:80";
+const productionApiRoot = "http://ryanlackie-portfolio-api.herokuapp.com:80";
 
 let apiRoot;
 if (process.env.NODE_ENV === 'development') {
     apiRoot = window.location.hostname.includes('staging') ? stagingApiRoot : localApiRoot;
-} else {
+} else if (process.env.NODE_ENV === 'production') {
     apiRoot = productionApiRoot;
 }
 
