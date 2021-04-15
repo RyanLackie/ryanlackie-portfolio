@@ -39,7 +39,7 @@ class App extends Component {
         });
     }
 
-    //Shaired Functions
+    // Shared Functions
     willAnimate(id) {
         let topOffSet = window.innerHeight*0.15;
         let topOfScreen = window.scrollY + topOffSet;

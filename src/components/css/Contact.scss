@@ -45,8 +45,20 @@ $background: #f7f7f7;
     font-family: 'Montserrat', sans-serif;
     color: black;
 }
+.Contact input:required {
+    box-shadow: none;
+}
+.Contact input:invalid {
+    box-shadow: 0 0 0 red;
+}
 .Contact textarea::placeholder {
     color: lightgray;
+}
+.Contact textarea:required {
+    box-shadow: none;
+}
+.Contact textarea:invalid {
+    box-shadow: 0 0 0 red;
 }
 @media only screen and (max-width: 991px) {   /*when the browser window is 991px wide or less:*/
     .Contact .lgInputCol {
@@ -97,6 +109,22 @@ $textColor: white;
     color: $textColor;
     font-size: 2em;
     transition: all .9s;
+}
+.Contact .loading-icon {
+    color: white;
+    animation-name: spin;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    display: inline-block;
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
 }
 
 .Contact .alert {
