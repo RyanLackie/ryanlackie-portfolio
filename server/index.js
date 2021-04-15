@@ -23,7 +23,7 @@ app.use('/app', controller);
 
 // Server Stuff
 const server = 'localhost';
-const port = process.env.PORT;
+const port = process.env.API_PORT;
 
 // Port listen and message
 app.listen(port);
