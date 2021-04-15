@@ -16,7 +16,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start": "HEROKU_DEPLOY=true react-scripts build"
+
+    "postinstall": "HEROKU_DEPLOY=true react-scripts build",
+    "start": ""
   },
   "eslintConfig": {
     "extends": "react-app"
