@@ -1,8 +1,8 @@
-const protocol = window.location.hostname === 'localhost' ? 'http://' : 'http://'
+// Change non localhost to https if server get's setup
+const protocol = window.location.hostname === 'localhost' ? 'http://' : 'http://';
 const apiHost = protocol+window.location.hostname;
 const port = apiHost.includes('localhost') ? ':8000' : ':80';
 const apiRoot = apiHost + port;
-console.log(apiRoot);
 
 export function sendMessage(name, email, phoneNumber, message) {
     return myFetch(apiRoot + "/app/sendMessage", {
