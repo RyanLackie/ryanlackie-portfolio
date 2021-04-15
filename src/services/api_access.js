@@ -2,12 +2,10 @@ const localApiRoot = "http://localhost:8080";
 const stagingApiRoot = "http://ryanlackie-port-api-staging.herokuapp.com:80";
 const productionApiRoot = "http://ryanlackie-portfolio-api.herokuapp.com:80";
 
-let apiRoot;
-console.log(process.env.NODE_ENV);
-if (process.env.NODE_ENV === 'development') {
-    apiRoot = window.location.hostname.includes('staging') ? stagingApiRoot : localApiRoot;
-} else if (process.env.NODE_ENV === 'production') {
-    apiRoot = productionApiRoot;
+let apiRoot = localApiRoot;
+console.log(process.env.HEROKU_DEPLOY);
+if (process.env.HEROKU_DEPLOY === 'true') {
+    apiRoot = window.location.hostname.includes('staging') ? stagingApiRoot : productionApiRoot;
 }
 
 
