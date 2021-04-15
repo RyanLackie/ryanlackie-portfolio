@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
 
 // Server Stuff
 const server = 'localhost';
-const port = process.env.API_PORT;
+const port = process.env.PORT;
 
 // Port listen and message
 app.listen(port);
