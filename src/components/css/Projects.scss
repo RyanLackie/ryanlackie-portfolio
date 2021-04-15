@@ -1,0 +1,109 @@
+$forground: indigo;
+$background: white;
+
+.Projects {
+    background: $background;
+}
+
+.Projects .project {
+    position: relative;
+    display: inline-block;
+    width: 320px;
+    height: 320px;
+    background: white;
+    margin: 0px 20px 90px 20px;
+    visibility: hidden;
+}
+
+.Projects .project .imageContainer {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    margin-bottom: 15px;
+    cursor: default;
+    border: 1px lightgray solid;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.Projects .project .image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.Projects .project .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: gold;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.Projects .project .overlay:hover {
+    opacity: 0.98;
+}
+.Projects .project .overlay:hover .buttonContainer .linkBtn {
+    opacity: 1;
+}
+.Projects .project .overlay:hover .buttonContainer .inactiveLinkBtn {
+    opacity: 1;
+}
+
+.Projects .project .overlay .buttonContainer {
+    position: absolute;
+    top: 95px;
+    width: 100%;
+    text-align: center;
+}
+.Projects .project .overlay .buttonContainer .linkBtn {
+    height: 50px;
+    padding: 0px 10px;
+    margin: 0px 10px;
+    opacity: 0;
+    background: gold;
+    border: 3px white solid;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+}
+.Projects .project .overlay .buttonContainer .linkBtn:hover {
+    background: white;
+    color: gold;
+}
+.Projects .project .overlay .buttonContainer .inactiveLinkBtn {
+    height: 50px;
+    padding: 0px 10px;
+    margin: 0px 10px;
+    opacity: 0;
+    border: 3px white solid;
+    background: white;
+    color: gold;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    cursor: default;
+}
+
+.Projects .project .footer {
+    text-align: center;
+}
+.Projects .project .footer .title {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+.Projects .project .footer .tools {
+    font-size: 12px;
+    font-weight: 800;
+    font-family: 'Quicksand', sans-serif;
+}
+.Projects .project .footer .about {
+    font-size: 15px;
+    font-family: 'Quicksand', sans-serif;
+}

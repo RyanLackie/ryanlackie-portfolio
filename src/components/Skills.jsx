@@ -12,26 +12,11 @@ import img4 from '../assets/cloud-icon.png';
 
 export default class Skills extends Component {
     componentWillUpdate() {
-        var top = document.getElementById('frontend-container').getBoundingClientRect().top - window.innerHeight; // Start Effect
-        var bottom = document.getElementById('backend-container').getBoundingClientRect().bottom - 500; //End Effect
-
-        var range = bottom - top;
-        var amt = -(top / range);
-        var rate = 50;
-        
-        amt = rate * amt;
-        amt = Math.max(0, amt);
-        amt = Math.min(60, amt);
-
-        document.getElementById('frontend').style.marginBottom = amt+'px';
-        document.getElementById('backend').style.marginBottom = amt+'px';
-
-        //console.log('amt ' + amt + '   margin ' + document.getElementById('frontend').style.marginBottom);
         this.animationHandler();
     }
 
     animationHandler() {
-        for (var card = 1; card <= 4; card++) {
+        for (let card = 1; card <= 4; card++) {
             if (this.props.willAnimate('card' + card)) {
                 document.getElementById('card' + card).style.visibility = 'visible';
                 if (card%2 === 0)
@@ -48,7 +33,7 @@ export default class Skills extends Component {
             }
         }
 
-        for (var group = 1; group <= 8; group++) {
+        for (let group = 1; group <= 6; group++) {
             if (this.props.willAnimate('group' + group)) {
                 document.getElementById('group' + group).style.visibility = 'visible';
                 document.getElementById('group' + group).classList.add('zoomIn');
@@ -70,8 +55,8 @@ export default class Skills extends Component {
                         <div className="sectionLabelLine"></div>
                     </div>
                 </div>
-                
-                <div className="container-fluid">
+
+                <div className="container-fluid description-section">
 
                     <div className="row justify-content-center">
 
@@ -81,7 +66,7 @@ export default class Skills extends Component {
                                 Web Application Development
                             </div>
                             <div className="footer">
-                                Fast, responsive and intuitive applications implimenting strong UI and UX design.
+                                Fast, responsive and intuitive applications with focus to UI UX, mobile first design, and inclusive accessibility.
                             </div>
                         </div>
 
@@ -91,8 +76,7 @@ export default class Skills extends Component {
                                 API Integration & Development
                             </div>
                             <div className="footer">
-                                REST API creation and integration for large scale projects using MVC patterns 
-                                and attention to security.
+                                Experienced in REST API development and integration for small and large projects with attention to speed and security.
                             </div>
                         </div>
 
@@ -106,7 +90,7 @@ export default class Skills extends Component {
                                 Database Design & Development
                             </div>
                             <div className="footer">
-                                Database architectures in MySQL, always aiming for performance and scalability.
+                                Background in database architecture for complex table relationships always aiming for performance and scalability. As well as managing database migrations to move over 15.6 million rows of data between legacy and new projects.
                             </div>
                         </div>
 
@@ -114,62 +98,81 @@ export default class Skills extends Component {
                             <img src={img4} className='image' alt='Cloud Integration Img'></img>
                             <div className="header">Cloud Integration</div>
                             <div className="footer">
-                                Deployment of Vue and React, Node.js apps, and databases to cloud 
-                                platforms and utilization of continuous integration pipelines.
+                                Hosting for apps, APIs, and media storage on linux based cloud platforms utilizing project containerization and continuous integration and development pipelines for fast and reliable releases.
                             </div>
                         </div>
 
                     </div>
-                    
+
                 </div>
 
-                <div className="container-fluid" id='frontend-container'>
-                    <div className="type" id='frontend'>
-                        <div className="centerer"></div>
-                        <div className="header">Client Side</div>
-                    </div>
+                <div className="container-fluid">
 
                     <div className="skillRow row justify-content-center">
 
                         <div className="group animated" id='group1'>
                             <div className="header">Languages</div>
                             <div className="info row">
-                                <div className="item">HTML</div>
-                                <div className="item">CSS/SCSS</div>
-                                <div className="item">SASS</div>
                                 <div className="item">JavaScript</div>
+                                <div className="item">Python</div>
+                                <div className="item">Java</div>
+                                <div className="item">C#</div>
                             </div>
                         </div>
 
                         <div className="group animated" id='group2'>
-                            <div className="header">Frameworks</div>
+                            <div className="header">Styling</div>
                             <div className="info row">
-                                <div className="item">Vue</div>
-                                <div className="item">React</div>
-                                <div className="item">Angular</div>
-                                <div className="item">Android Gradle</div>
+                                <div className="item">HTML</div>
+                                <div className="item">CSS</div>
+                                <div className="item">SCSS</div>
+                                <div className="item">Stylus</div>
+                                <div className="item">Bootstrap</div>
+                                <div className="item">Foundation</div>
                             </div>
                         </div>
 
                         <div className="group animated" id='group3'>
-                            <div className="header">Libraries</div>
+                            <div className="header">Front-End Technologies</div>
                             <div className="info row">
-                                <div className="item">Bootstrap</div>
-                                <div className="item">Redux</div>
+                                <div className="item">Svelte</div>
+                                <div className="item">Vue</div>
+                                <div className="item">React</div>
                                 <div className="item">jQuery</div>
-                                <div className="item">Libgdx</div>
                             </div>
                         </div>
 
                         <div className="group animated" id='group4'>
-                            <div className="header">Tools</div>
+                            <div className="header">Back-End Technologies</div>
                             <div className="info row">
-                                <div className="item">OOCSS</div>
-                                <div className="item">DRY</div>
-                                <div className="item">Babel</div>
-                                <div className="item">Webpack</div>
+                                <div className="item">Django</div>
+                                <div className="item">Flask</div>
+                                <div className="item">Node</div>
+                                <div className="item">MySQL</div>
+                            </div>
+                        </div>
+
+                        <div className="group animated" id='group5'>
+                            <div className="header">Tools and Services</div>
+                            <div className="info row">
+                                <div className="item">Docker</div>
+                                <div className="item">Linux</div>
                                 <div className="item">Git</div>
-                                <div className="item">Photoshop</div>
+                                <div className="item">K6</div>
+                                <div className="item">Mocha</div>
+                                <div className="item">Selenium</div>
+                                <div className="item">Jira</div>
+                                <div className="item">Postman</div>
+                            </div>
+                        </div>
+
+                        <div className="group animated" id='group6'>
+                            <div className="header">CI/CD and Hosting</div>
+                            <div className="info row">
+                                <div className="item">Circle CI</div>
+                                <div className="item">Heroku</div>
+                                <div className="item">AWS</div>
+                                <div className="item">Digital Ocean</div>
                             </div>
                         </div>
 
@@ -177,15 +180,15 @@ export default class Skills extends Component {
                 </div>
 
 
-                <div className="container-fluid" id='backend-container'>
+                {/* <div className="container-fluid" id='backend-container'>
                     <div className="type" id='backend'>
                         <div className="centerer"></div>
                         <div className="header">Server Side</div>
                     </div>
-                
+
                     <div className="skillRow row justify-content-center">
 
-                        <div className="group animated" id='group5'>
+                        <div className="group animated" id='group6'>
                             <div className="header">Languages</div>
                             <div className="info row">
                                 <div className="item">JavaScript</div>
@@ -197,7 +200,7 @@ export default class Skills extends Component {
                             </div>
                         </div>
 
-                        <div className="group animated" id='group6'>
+                        <div className="group animated" id='group7'>
                             <div className="header">Frameworks And Runtimes</div>
                             <div className="info row">
                                 <div className="item">Express</div>
@@ -207,9 +210,9 @@ export default class Skills extends Component {
                             </div>
                         </div>
 
-                        <div className="group animated" id='group7'>
+                        <div className="group animated" id='group8'>
                             <div className="header">Tools</div>
-                            <div className="info row">                                
+                            <div className="info row">
                                 <div className="item">npm</div>
                                 <div className="item">yarn</div>
                                 <div className="item">Babel</div>
@@ -219,7 +222,7 @@ export default class Skills extends Component {
                             </div>
                         </div>
 
-                        <div className="group animated" id='group8'>
+                        <div className="group animated" id='group9'>
                             <div className="header">Server Hosting</div>
                             <div className="info row">
                                 <div className="item">AWS</div>
@@ -232,9 +235,9 @@ export default class Skills extends Component {
                         </div>
 
                     </div>
-                </div>     
+                </div> */}
 
-                
+
             </div>
         );
     }
