@@ -1,8 +1,9 @@
-const apiHost = window.location.hostname;
+const hostname = window.location.hostname;
+const apiHost = hostname === 'localhost' ? "http://"+hostname : hostname;
 console.log(apiHost);
-const port = window.location.hostname.includes('localhost') ? ':8080' : ':80';
+const port = window.location.hostname.includes('localhost') ? ':8000' : ':80';
 const apiRoot = apiHost + port;
-console.log(apiRoot);
+console.log(apiHost);
 
 export function sendMessage(name, email, phoneNumber, message) {
     return myFetch(apiRoot + "/app/sendMessage", {
