@@ -23,8 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postinstall": "HEROKU_DEPLOY=true react-scripts build",
-    "start": "node server/index.js"
+    "start": "HEROKU_DEPLOY=true react-scripts build && node server/index.js"
   },
   "eslintConfig": {
     "extends": "react-app"
