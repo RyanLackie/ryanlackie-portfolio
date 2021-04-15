@@ -1,6 +1,6 @@
 const protocol = window.location.hostname === 'localhost' ? 'http://' : 'https://'
 const apiHost = protocol+window.location.hostname;
-const port = window.location.hostname.includes('localhost') ? ':8000' : ':80';
+const port = apiHost.includes('localhost') ? ':8000' : ':80';
 const apiRoot = apiHost + port;
 console.log(apiRoot);
 
