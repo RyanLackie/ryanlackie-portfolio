@@ -35,8 +35,8 @@ export default class Home extends Component {
                         </div>
 
                         <div className="buttons">
-                            <div className="button" onClick={this.openLink.bind(this, "https://drive.google.com/open?id=13kX1LcacyBnpHS0BxnEq-Q4OqFdDYtzX")}>
-                                Resume
+                            <div className="button" onClick={this.openLink.bind(this, "https://drive.google.com/file/d/1nDQrORvtm3Afkih4QyvT4JU9dGEPo43q/view?usp=sharing")}>
+                                Résumé
                             </div>
                             <div className="button" onClick={this.openLink.bind(this, "https://github.com/RyanLackie/RyanLackie-Portfolio")}>
                                 Code
