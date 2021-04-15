@@ -3,10 +3,10 @@ const stagingApiRoot = "http://ryanlackie-port-api-staging.herokuapp.com:80";
 const productionApiRoot = "http://ryanlackie-portfolio-api.herokuapp.com:80";
 
 let apiRoot = localApiRoot;
-// console.log(process.env.HEROKU_DEPLOY);
-// if (process.env.HEROKU_DEPLOY === 'true') {
-//     apiRoot = window.location.hostname.includes('staging') ? stagingApiRoot : productionApiRoot;
-// }
+console.log(process.env.HEROKU_DEPLOY);
+if (process.env.HEROKU_DEPLOY === 'true') {
+    apiRoot = window.location.hostname.includes('staging') ? stagingApiRoot : productionApiRoot;
+}
 
 
 export function sendMessage(name, email, phoneNumber, message) {
