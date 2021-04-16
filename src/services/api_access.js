@@ -1,5 +1,5 @@
 // Change non localhost to https if server get's setup
-const protocol = window.location.hostname === 'localhost' ? 'http://' : 'http://';
+const protocol = window.location.hostname === 'localhost' || window.location.hostname.includes('staging') ? 'http://' : 'https://';
 const apiHost = protocol+window.location.hostname;
 const port = apiHost.includes('localhost') ? ':8000' : ':80';
 const apiRoot = apiHost + port;
